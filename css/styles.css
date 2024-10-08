@@ -32,13 +32,32 @@
 }
 /*	Selector de Etiqueta - <> 	*/
 h1 {
-	color: brown;
+	/* color: brown; */
+    color: hsl(25, 50%, 40%); /* Un verde puro */
+	
+	/* Hue primarios:
+	0 rojo
+			30 naranja
+		60 amarillo
+			90 lima
+	120 verde
+			150 verdelindo
+		180 cyan
+			210 celeste
+	240 azul 
+			270 purpura
+		300 magenta
+			330 bordó
+	
+	*/
+	
 	font-size: 150%;
 	font-family: RingBearer; 
 }
 
 h3 {
-	color: rgb(206, 54, 34);
+	/* color: rgb(206, 54, 34); */
+    color: hsl(40, 50%, 40%); /* Un verde puro */
 	font-size: 85%;
 	font-weight: 500;
 	font-family: SachaWynterTight; 
