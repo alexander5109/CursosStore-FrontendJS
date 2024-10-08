@@ -20,7 +20,16 @@
 }
 
 
+/*	Pseudo selector 	*/
+:root {
+	font-size: 90%;
+}
 
+
+/*	Pseudo universal 	*/
+* {
+	font-family: RingBearer; 
+}
 /*	Selector de Etiqueta - <> 	*/
 h1 {
 	color: brown;
@@ -37,7 +46,7 @@ h3 {
 
 form {
     /* Optional form styling */
-    width: 35%; /* Fixed width, or you can use percentage */
+    width: auto; /* Fixed width, or you can use percentage */
     padding: 20px;
     border: 1px solid #ccc;
 }
@@ -46,11 +55,18 @@ form {
 
 
 /* 	Selector de Clase - class 	*/
+
+.content{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+}
+
 .imagen_contenedor {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
-    height: 90vh;           /* Full height of the viewport */
+    height: auto;           /* Full height of the viewport */
     border-radius: 15px;     /* Rounds the corners */
     padding: 10px;           /* Adds some space inside the container */
 }
@@ -68,10 +84,11 @@ form {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
-    height: 100vh;           /* Full height of the viewport */
+    height: auto;           /* Full height of the viewport */
 }
 
 .h3subtitulo {
+	display: inline;
 	font-family: SachaWynterTight;
 	font-size: 75%;
 	font-weight: 100;
