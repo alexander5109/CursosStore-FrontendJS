@@ -32,7 +32,7 @@
 }
 /*	Selector de Etiqueta - <> 	*/
 h1 {
-	/* color: brown; */
+	color: brown;
     color: hsl(25, 50%, 40%); /* Un verde puro */
 	
 	/* Hue primarios:
@@ -56,7 +56,7 @@ h1 {
 }
 
 h3 {
-	/* color: rgb(206, 54, 34); */
+	color: rgb(206, 54, 34);
     color: hsl(40, 50%, 40%); /* Un verde puro */
 	font-size: 85%;
 	font-weight: 500;
