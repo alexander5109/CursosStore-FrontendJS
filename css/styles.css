@@ -50,7 +50,7 @@ form {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
-    height: 80vh;           /* Full height of the viewport */
+    height: 90vh;           /* Full height of the viewport */
     border-radius: 15px;     /* Rounds the corners */
     padding: 10px;           /* Adds some space inside the container */
 }
