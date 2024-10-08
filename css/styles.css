@@ -1,0 +1,55 @@
+/*	Agregando fonts	*/
+
+@font-face {
+    font-family: 'SachaWynterTight';
+    src: url('fonts/sachwt_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RingBearer';
+    src: url('fonts/RINGM__.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Harrington';
+    src: url('fonts/HARNGTON.TTF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*	Selector de Etiqueta - <> 	*/
+h1 {
+	color: brown;
+	font-size: 150%;
+	font-family: RingBearer; 
+}
+
+h3 {
+	color: rgb(206, 54, 34);
+	font-size: 85%;
+	font-weight: 500;
+	font-family: SachaWynterTight; 
+}
+
+
+/* 	Selector de Clase - class 	*/
+.h3subtitulo {
+	font-family: SachaWynterTight;
+	font-size: 75%;
+	font-weight: 100;
+	font-style: italic;
+}
+
+
+
+
+/* 	Selector de ID - id */
+#python-label {
+	font-family: SachaWynterTight;
+	font-size: 55%;
+	color: orange;
+}
