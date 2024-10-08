@@ -35,8 +35,42 @@ h3 {
 	font-family: SachaWynterTight; 
 }
 
+form {
+    /* Optional form styling */
+    width: 35%; /* Fixed width, or you can use percentage */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+
+
 
 /* 	Selector de Clase - class 	*/
+.imagen_contenedor {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 80vh;           /* Full height of the viewport */
+    border-radius: 15px;     /* Rounds the corners */
+    padding: 10px;           /* Adds some space inside the container */
+}
+
+.imagen_contenedor img {
+    border-radius: 15px;      /* Rounds the corners of the image */
+    max-width: 100%;          /* Makes the image responsive */
+    height: auto;             /* Maintains the aspect ratio */
+    border: 5px solid rgba(0, 128, 255, 0.6); /* Colored border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow around the image */
+}
+
+
+.form_contenedor {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100vh;           /* Full height of the viewport */
+}
+
 .h3subtitulo {
 	font-family: SachaWynterTight;
 	font-size: 75%;
@@ -44,12 +78,16 @@ h3 {
 	font-style: italic;
 }
 
+/* 	Selector de Clase - class 	*/
+.form_label {
+	font-family: SachaWynterTight;
+	font-size: 55%;
+}
+
 
 
 
 /* 	Selector de ID - id */
 #python-label {
-	font-family: SachaWynterTight;
-	font-size: 55%;
 	color: orange;
 }
