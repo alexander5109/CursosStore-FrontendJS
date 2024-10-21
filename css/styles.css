@@ -188,16 +188,11 @@ form {
 .img-container {
     display: flex;
     justify-content: center;
-    /* Centers horizontally */
     align-items: center;
-    /* Centers vertically */
     height: auto;
     width: 45vw;
-    /* 50% of the viewport width */
-    margin: auto;
-    /* Full height of the viewport */
+    margin: 0, auto;
     border-radius: 0;
-    /* Rounds the corners */
     padding: 10px;
 }
 
