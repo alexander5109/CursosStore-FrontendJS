@@ -99,7 +99,7 @@ h4 {
     font-size: 1rem;
     font-weight: 200;
     font-style: italic;
-	padding: 0;
+    padding: 0;
 }
 
 
@@ -107,18 +107,21 @@ h4 {
 .h-container {
     display: flex;
     justify-content: center;
-	margin: auto;
+    margin: auto;
     padding: 1rem;
-    width: 50vw;              /* 50% of the viewport width */
+    width: 50vw;
+    /* 50% of the viewport width */
     text-align: center;
 }
+
 .text-container {
     display: flex;
     justify-content: center;
-	margin: auto;
+    margin: auto;
     /* padding: 1rem; */
     padding: 0;
-    width: 50vw;              /* 50% of the viewport width */
+    width: 50vw;
+    /* 50% of the viewport width */
     text-align: center;
 }
 
@@ -173,7 +176,10 @@ form {
 }
 
 
-#python-label /* Selector de ID's */ {
+#python-label
+
+/* Selector de ID's */
+    {
     color: orange;
 }
 
@@ -186,10 +192,11 @@ form {
     align-items: center;
     /* Centers vertically */
     height: auto;
-    width: 45vw;              /* 50% of the viewport width */
-	margin: auto;
+    width: 45vw;
+    /* 50% of the viewport width */
+    margin: auto;
     /* Full height of the viewport */
-    border-radius: 0 ; 
+    border-radius: 0;
     /* Rounds the corners */
     padding: 10px;
 }
