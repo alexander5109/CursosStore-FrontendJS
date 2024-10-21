@@ -1,20 +1,20 @@
-
-
-/*--------------------------------------------------------------------------------------------------------------#
-#------------------------------------------------Fuentes--------------------------------------------------------#
-#---------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------#
+#--------------------------------Fuentes--------------------------------#
+#----------------------------------------------------------------------*/
 @font-face {
     font-family: 'SachaWynterTight';
     src: url('fonts/sachwt_.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'RingBearer';
     src: url('fonts/RINGM__.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Harrington';
     src: url('fonts/HARNGTON.TTF.ttf') format('truetype');
@@ -23,31 +23,35 @@
 }
 
 
-/*--------------------------------------------------------------------------------------------------------------#
-#----------------------------------------------PseudoSelectors--------------------------------------------------#
-#---------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------#
+#--------------------------------Global---------------------------------#
+#----------------------------------------------------------------------*/
 
 :root {
-	font-size: 90%;
+    font-size: 90%;
 }
 
-/*--------------------------------------------------------------------------------------------------------------#
-#----------------------------------------------SelectorUniversal--------------------------------------------------#
-#---------------------------------------------------------------------------------------------------------------*/
 * {
-	font-family: RingBearer; 
+    /* font-family: RingBearer; */
 }
 
 
-/*-----------------------------------------------------------------------------------------------------------------#
-#----------------------------------------------Selector de Etiquetas-----------------------------------------------#
-#----------------------------------------------------Codigos <>---------------------------------------------------*/
 
+
+
+/*---------------------------------------------------------------------#
+#------------------------------Selectores------------------------------#
+#---------------------------------------------------------------------*/
+
+
+/* ----------------Titulos---------------- */
 h1 {
-	color: brown;
-    color: hsl(25, 50%, 40%); /* Un verde puro */
-	
-	/* Hue primarios:
+    text-align: center;
+    color: brown;
+    color: hsl(25, 50%, 40%);
+    /* Un verde puro */
+
+    /* Hue primarios:
 	0 rojo
 			30 naranja
 		60 amarillo
@@ -62,90 +66,148 @@ h1 {
 			330 bordó
 	
 	*/
-	
-	font-size: 150%;
-	font-family: RingBearer; 
+
+    font-size: 3rem;
+    font-family: RingBearer;
 }
 
+h2 {
+    color: rgb(206, 54, 34);
+    color: hsl(40, 50%, 40%);
+    font-weight: 500;
+    font-size: 2rem;
+    /* font-family: RingBearer; */
+    font-family: SachaWynterTight;
+}
+
+
 h3 {
-	color: rgb(206, 54, 34);
-    color: hsl(40, 50%, 40%); /* Un verde puro */
-	font-size: 85%;
-	font-weight: 500;
-	font-family: SachaWynterTight; 
+    /* display: inline; */
+    /* display: block; */
+    color: hsl(40, 50%, 40%);
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-style: italic;
+    font-family: SachaWynterTight;
+}
+
+
+h4 {
+    /* display: inline; */
+    /* display: block; */
+    color: hsl(40, 50%, 40%);
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+	padding: 0;
+}
+
+
+/* ----------------Texto---------------- */
+.h-container {
+    display: flex;
+    justify-content: center;
+	margin: auto;
+    padding: 1rem;
+    width: 50vw;              /* 50% of the viewport width */
+    text-align: center;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+	margin: auto;
+    /* padding: 1rem; */
+    padding: 0;
+    width: 50vw;              /* 50% of the viewport width */
+    text-align: center;
+}
+
+
+/* ----------------NavBar---------------- */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav {
+    width: 100%;
+    /* Full width */
+    display: flex;
+    /* Flexbox layout for horizontal alignment */
+    justify-content: space-evenly;
+    /* Evenly space the items */
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+nav h1 {
+    margin: 0 1rem;
+    /* Add some space between the navigation items */
+    font-size: 1.5rem;
+    /* Adjust font size if needed */
+}
+
+
+
+
+
+/* ----------------Formulario---------------- */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.form_label {
+    font-family: SachaWynterTight;
+    font-size: 55%;
 }
 
 form {
-    width: auto; /* Fixed width, or you can use percentage */
+    width: auto;
+    /* Fixed width, or you can use percentage */
     padding: 20px;
     border: 1px solid #ccc;
 }
 
 
+#python-label /* Selector de ID's */ {
+    color: orange;
+}
 
 
-/*-----------------------------------------------------------------------------------------------------------------#
-#----------------------------------------------Selector de Clases--------------------------------------------------#
-#-----------------------------------------------------------------------------------------------------------------*/
-
-.container{
+/* ----------------Imagenes---------------- */
+.img-container {
     display: flex;
-    justify-content: space-evenly;
-    /* align-items: center;  */
-    
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    height: auto;
+    width: 45vw;              /* 50% of the viewport width */
+	margin: auto;
+    /* Full height of the viewport */
+    border-radius: 0 ; 
+    /* Rounds the corners */
+    padding: 10px;
 }
 
-.content{
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+.img-container img {
+    border-radius: 15px;
+    /* Rounds the corners of the image */
+    max-width: 100%;
+    /* Makes the image responsive */
+    height: auto;
+    /* Maintains the aspect ratio */
+    border: 5px solid rgba(0, 128, 255, 0.6);
+    /* Colored border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Slight shadow around the image */
 }
 
-.imagen_contenedor {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    height: auto;           /* Full height of the viewport */
-    border-radius: 15px;     /* Rounds the corners */
-    padding: 10px;           /* Adds some space inside the container */
-}
-
-.imagen_contenedor img {
-    border-radius: 15px;      /* Rounds the corners of the image */
-    max-width: 100%;          /* Makes the image responsive */
-    height: auto;             /* Maintains the aspect ratio */
-    border: 5px solid rgba(0, 128, 255, 0.6); /* Colored border */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow around the image */
-}
-
-
-.form_contenedor {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
-    height: auto;           /* Full height of the viewport */
-}
-
-.form_label {
-	font-family: SachaWynterTight;
-	font-size: 55%;
-}
-
-.h3subtitulo {
-	display: inline;
-	font-family: SachaWynterTight;
-	font-size: 75%;
-	font-weight: 100;
-	font-style: italic;
-}
-
-
-
-
-/*-----------------------------------------------------------------------------------------------------------------#
-#----------------------------------------------Selector de ID's----------------------------------------------------#
-#-----------------------------------------------------------------------------------------------------------------*/
-
-#python-label {
-	color: orange;
+img {
+    display: block;
+    margin: 0 auto;
 }
