@@ -6,7 +6,19 @@
 
 ## Descripción del Proyecto
 
-Este proyecto forma parte de la preentrega para el curso **Talento Tech Front End JS**. El objetivo es desarrollar una página web que cumpla con los requisitos establecidos en la consigna, aplicando buenas prácticas de desarrollo frontend y utilizando tecnologías HTML, CSS y JavaScript. La página está estructurada de forma semántica y es completamente funcional, con un enfoque en la responsividad y la usabilidad.
+Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y a la venta de paquetes de software con licencia. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva.
+
+El proyecto incluye la implementación de un carrito de compras que permite a los usuarios seleccionar y comprar cursos y software de manera eficiente. Se ha utilizado HTML, CSS y JavaScript para crear una interfaz de usuario moderna y funcional, garantizando que la experiencia de compra sea fluida y fácil de usar.
+
+### Características Clave:
+- **Carrito de Compras**: Permite a los usuarios agregar productos y revisar su selección antes de proceder a la compra.
+- **Promoción de Cursos**: Presenta una variedad de cursos de programación, cada uno con descripciones detalladas y precios.
+- **Venta de Software**: Ofrece paquetes de software con licencia, proporcionando información clara sobre cada producto.
+- **Diseño Responsivo**: La página se adapta a diferentes tamaños de pantalla, asegurando una buena experiencia en dispositivos móviles y de escritorio.
+- **Interacción con el Usuario**: Se incluye un formulario de contacto funcional para que los usuarios puedan realizar consultas o solicitar más información.
+
+Este proyecto no solo busca ser una plataforma de ventas, sino también un recurso valioso para aquellos interesados en expandir sus conocimientos en programación y adquirir herramientas de software esenciales para su desarrollo profesional.
+
 
 ## Requisitos de la Preentrega
 
@@ -61,10 +73,15 @@ A continuación, se presentan las consignas implementadas en el proyecto:
 
 ## URL del Proyecto
 
-El proyecto puede visualizarse en la siguiente URL: [Enlace al sitio web](#) _(Reemplazar con la URL del hosting)_
+El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html](#) 
 
 ## Instalación y Uso
 
-1. Clonar este repositorio:
+### Opcion 1: Clonar este repositorio con git:
    ```bash
-   git clone https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd.git
+   git clone https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd.git```
+  -  Abrir el archivo index.html con un navegador
+
+### Opcion 2: Descargar una release directamente:
+	Entregas: [https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd/releases](#) 
+	
