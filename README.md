@@ -77,11 +77,11 @@ El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.githu
 
 ## Instalación y Uso
 
-### Opcion 1: Clonar este repositorio con git:
-   ```bash
-   git clone https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd.git```
-  -  Abrir el archivo index.html con un navegador
+### Opción 1: Clonar este repositorio con Git
+```bash
+git clone https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd.git
+```
+- Abrir el archivo `index.html` con un navegador.
 
-### Opcion 2: Descargar una release directamente:
-	Entregas: [https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd/releases](#) 
-	
+### Opción 2: Descargar una release directamente
+Entregas: [https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd/releases](https://github.com/ecthelion5109/TalentoTechProyectoFrontEnd/releases)
