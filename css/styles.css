@@ -29,26 +29,25 @@
 
 :root {
     font-size: 90%;
-}
 
 * {
     /* font-family: RingBearer; */
 }
 
-
+body {
+	margin: 0;
+	padding: 0;
+	
+	background: url('../img/background.jpg') no-repeat center center fixed;
+	background-size: cover
+}
 
 
 
 /*---------------------------------------------------------------------#
-#------------------------------Selectores------------------------------#
+#------------------------------Colores------------------------------#
 #---------------------------------------------------------------------*/
 
-
-/* ----------------Titulos---------------- */
-h1 {
-    text-align: center;
-    color: brown;
-    color: hsl(25, 50%, 40%);
     /* Un verde puro */
 
     /* Hue primarios:
@@ -64,14 +63,51 @@ h1 {
 			270 purpura
 		300 magenta
 			330 bordó
-	
 	*/
+
+/* ----------------TituloPrincipal---------------- */
+h1 {
+    text-align: center;
+    color: brown;
+    color: rgb(212, 162, 25);
 
     font-size: 3rem;
     font-family: RingBearer;
+	
+    margin: 2rem; /* Removes any default margin */
+	
+	/* margin-block-start: 0.67em; */
+    /* margin-block-end: 0.67em; */
+    /* margin-inline-start: 0px; */
+    /* margin-inline-end: 0px; */
 }
 
+.titulo, .subtitulo {
+    display: block;
+    line-height: 1; /* Sets the same line height for consistency */
+    margin: 1.5rem; /* Removes any default margin */
+}
+
+.titulo {
+    font-size: 90%;
+}
+
+.subtitulo {
+    font-size: 110%;
+    color: rgb(255, 255, 255);
+    font-family: SachaWynterTight;
+}
+
+
+
+
+/* ----------------HeadersParaCuerpo---------------- */
 h2 {
+    text-align: center;
+    /* color: brown; */
+    /* color: rgb(212, 162, 25); */
+	
+	
     color: rgb(206, 54, 34);
     color: hsl(40, 50%, 40%);
     font-weight: 500;
@@ -79,7 +115,6 @@ h2 {
     /* font-family: RingBearer; */
     font-family: SachaWynterTight;
 }
-
 
 h3 {
     /* display: inline; */
@@ -103,26 +138,48 @@ h4 {
 }
 
 
-/* ----------------Texto---------------- */
-.h-container {
-    display: flex;
+/* ----------------TituloPrincipal---------------- */
+p {
+	font-family: googleshit;
+    text-align: center;
+}
+
+
+article {
+    /* display: flex; */
     justify-content: center;
-    margin: auto;
+    margin: 1rem auto;
     padding: 1rem;
     width: 50vw;
-    /* 50% of the viewport width */
     text-align: center;
+	background-color: #f6e1c5;
+    border-radius: 15px;
 }
 
 .text-container {
     display: flex;
     justify-content: center;
-    margin: auto;
-    /* padding: 1rem; */
-    padding: 0;
+    margin: 1rem auto;
+    padding: 0.5rem;
     width: 50vw;
+    text-align: center;
+	background-color: #f6e1c5;
+    border-radius: 15px;
+}
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0rem;
+    /* width: 50vw; */
     /* 50% of the viewport width */
     text-align: center;
+    background-color: rgba(85, 55, 9, 0.75); 
+    background-color: rgba(47, 23, 15, 0.9);
+	background-color: rgba(66, 39, 12, 0.85);
 }
 
 
@@ -130,28 +187,28 @@ h4 {
 .nav-container {
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.7rem 0;
+	margin: 2rem 0;
+    background-color: rgba(85, 55, 9, 0.75); 
+    background-color: rgba(47, 23, 15, 0.9);
+	background-color: rgba(66, 39, 12, 0.85);
 }
 
 nav {
     width: 100%;
-    /* Full width */
     display: flex;
-    /* Flexbox layout for horizontal alignment */
     justify-content: space-evenly;
-    /* Evenly space the items */
-    /* padding: 0; */
-    /* margin: 0; */
+    padding: 0;
+    margin: 0;
 }
 
-nav h1 {
+nav a {
     margin: 0 1rem;
-    /* Add some space between the navigation items */
     font-size: 1.5rem;
-    /* Adjust font size if needed */
+	color: rgb(255, 255, 255);
+    text-decoration: none; 
+    font-family: RingBearer;
 }
-
-
 
 
 
@@ -172,7 +229,9 @@ form {
     width: auto;
     /* Fixed width, or you can use percentage */
     padding: 20px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+	background-color: #f6e1c5;
+    border-radius: 15px;
 }
 
 
@@ -191,7 +250,7 @@ form {
     align-items: center;
     height: auto;
     width: 45vw;
-    margin: 0, auto;
+    margin: auto;
     border-radius: 0;
     padding: 10px;
 }
@@ -203,7 +262,7 @@ form {
     /* Makes the image responsive */
     height: auto;
     /* Maintains the aspect ratio */
-    border: 5px solid rgba(0, 128, 255, 0.6);
+    border: 5px solid rgba(47, 23, 15, 0.9);
     /* Colored border */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     /* Slight shadow around the image */
