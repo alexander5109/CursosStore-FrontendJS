@@ -37,7 +37,6 @@
     body {
         margin: 0;
         padding: 0;
-
         background: url('../img/background.jpg') no-repeat center center fixed;
         background-size: cover
     }
@@ -119,17 +118,6 @@
 		padding: 0;
         margin: 0;
     }
-
-	
-	.text-overlay {
-		position: absolute;
-		/* color: white; /* Choose a color that contrasts with the image */
-		font-size: 3rem;
-		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for better readability */
-		padding-bottom: 8rem; /* Adds space from the top of the container */
-        color: rgb(0, 0, 0);
-        font-family: RingBearer;
-	}
 	
 
 	article p {
@@ -264,22 +252,22 @@
 
     .img-container img {
         max-width: 100%;
-        /* Makes the image responsive */
         height: auto;
-        /* Maintains the aspect ratio */
         border-radius: 1rem;
         border: 0.35rem solid rgba(47, 23, 15, 0.9);
         box-shadow: 0 0 1rem 0.5rem rgba(47, 23, 15, 0.9);
-        /* degradado */
-    }
-
-
-
-    img {
         display: block;
         margin: 0 auto;
     }
-	
+
+	.text-overlay {
+		position: absolute;
+		font-size: 2rem;
+		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+		padding-bottom: 8rem;
+        color: rgb(0, 0, 0);
+        /* font-family: RingBearer; */
+	}
 	
     /* ----------------footer---------------- */
     footer {

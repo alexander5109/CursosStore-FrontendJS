@@ -41,111 +41,101 @@
     (?=.*[@$!%*?&]): Ensures the password contains at least one special character from the set @$!%*?& (you can add/remove special characters as per your requirements).
     [A-Za-z\d@$!%*?&]{8,}: Ensures the total length is at least 8 characters, and the allowed characters include letters, digits, and the specified special characters. -->
 
-    <div class="form-container">
-        <form action="../code201.html" method="POST">
-            <h4>Basicos</h4>
+	 <div class="form-container">
+        <!-- <form action="../code201.html" method="POST"> -->
+		<form action="https://formspree.io/f/mrbgbqwy" method="POST">
+			<h4>Basicos</h4>
 
+			<p>
+				<label class="form_label" for="formInputName">Nombre: </label>
+				<input name="name" type="text" id="formInputName" size="30" placeholder="Escribi tu nombre guachin"
+					maxlength="25" minlength="5">
+			</p>
 
-            <p>
-                <label class="form_label" for="formInputName">Nombre: </label>
-                <input name="name" type="text" id="formInputName" size="30" placeholder="Escribi tu nombre guachin"
-                    maxlength="25" minlength="5">
-            </p>
+			<p>
+				<label class="form_label" for="formInputCorreo">Correo: </label>
+				<input name="correo" type="email" id="formInputCorreo" size="30" placeholder="Escribi tu correo guachin"
+					maxlength="25" minlength="5" required>
+			</p>
 
-            <p>
-                <label class="form_label" for="formInputCorreo">Correo: </label>
-                <input name="correo" type="email" id="formInputCorreo" size="30" placeholder="Escribi tu correo guachin"
-                    maxlength="25" minlength="5" required>
-            </p>
+			<p>
+				<label class="form_label" for="formInputEdad">Edad: </label>
+				<input name="edad" type="number" id="formInputEdad" size="25" min="18" max="120"
+					placeholder="Escribi tu edad guachin" value="17" required>
+			</p>
 
-            <p>
-                <label class="form_label" for="formInputEdad">Edad: </label>
-                <input name="edad" type="number" id="formInputEdad" size="25" min="18" max="120"
-                    placeholder="Escribi tu edad guachin" value="17" required>
-            </p>
+			<h4>RadioButtons</h4>
 
-            <!-- <p> -->
-            <!-- <label class="form_label" for="formInputPassword">Contraseña: </label> -->
-            <!-- <input name="password" type="password" id="formInputPassword" size="30" -->
-            <!-- placeholder="Escribi tu contraseña guachin" maxlength="25" minlength="5" required -->
-            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" -->
-            <!-- title="Must contain at least one uppercase letter, one lowercase letter, one number, and one special character, and be at least 8 characters long."> -->
-            <!-- </p> -->
+			<p>
+				<label class="form_label" for="php">PHP</label>
+				<input name="language" type="radio" id="php" value="php">
+			</p>
 
-            <h4>RadioButtons</h4>
+			<p>
+				<label class="form_label" for="python2">Python 2</label>
+				<input name="language" type="radio" id="python2" value="python2">
+			</p>
 
-            <p>
-                <label class="form_label" for="php">PHP</label>
-                <input name="language" type="radio" id="php" value="php">
-            </p>
+			<p>
+				<label style="font-style: italic; font-weight: 900;" class="form_label" for="python3">Python 3</label>
+				<input name="language" type="radio" id="python3" value="python3">
+			</p>
 
-            <p>
-                <label class="form_label" for="python2" id="python-label">Python 2</label>
-                <input name="language" type="radio" id="python2" value="python2">
-            </p>
+			<p>
+				<label class="form_label" for="csharp">C#</label>
+				<input name="language" type="radio" id="csharp" value="csharp">
+			</p>
 
-            <p>
-                <label style="font-style: italic; font-weight: 900;" class="form_label" for="python3"
-                    id="python-label">Python 3</label>
-                <input name="language" type="radio" id="python3" value="python3">
-            </p>
+			<p>
+				<label class="form_label" for="java">Java</label>
+				<input name="language" type="radio" id="java" value="java">
+			</p>
 
-            <p>
-                <label class="form_label" for="csharp">C#</label>
-                <input name="language" type="radio" id="csharp" value="csharp">
-            </p>
+			<h4>Checkboxes</h4>
+			<p>
+				<label class="form_label" for="estudiando">Estudiante</label>
+				<input name="estudiando" type="checkbox" id="estudiando" value="yes">
+			</p>
 
-            <p>
-                <label class="form_label" for="java">Java</label>
-                <input name="language" type="radio" id="java" value="java">
-            </p>
+			<p>
+				<label class="form_label" for="trabajando">Trabajando</label>
+				<input name="trabajando" type="checkbox" id="trabajando" value="yes">
+			</p>
 
-            <h4>Checkboxes</h4>
-            <p>
-                <label class="form_label" for="estudiando">Estudiante</label>
-                <input type="checkbox" id="estudiando" name="estudiando" value="yes">
-            </p>
+			<p>
+				<label class="form_label" for="casado">Casado</label>
+				<input name="casado" type="checkbox" id="casado" value="yes">
+			</p>
 
-            <p>
-                <label class="form_label" for="trabajando">Trabajando</label>
-                <input type="checkbox" id="trabajando" name="trabajando" value="yes">
-            </p>
+			<h4>Suba su DNI</h4>
+			<p>
+				<label class="form_label" for="archivo">Archivo: </label>
+				<input name="archivo" id="archivo" type="file">
+			</p>
 
-            <p>
-                <label class="form_label" for="casado">Casado</label>
-                <input type="checkbox" id="casado" name="casado" value="yes">
-            </p>
+			<h4>Seleccione continente</h4>
+			<p>
+				<label class="form_label" for="continente">Continente:</label>
+				<select name="continente" id="continente">
+					<option value="1">Africa</option>
+					<option value="2">Asia</option>
+					<option value="3" selected>America</option>
+				</select>
+			</p>
 
-            <h4>Suba su DNI</h4>
-            <p>
-                <label class="form_label" for="archivo">Archivo: </label>
-                <!-- <br> </br>  -->
-                <!-- <input name="archivo" id="archivo" type="file" disabled> -->
-                <input name="archivo" id="archivo" type="file">
-            </p>
+			<p>
+				<label for="formMensaje">Ingrese su mensaje: </label>
+				<br>
+				<textarea name="mensaje" id="formMensaje" rows="6" cols="40"
+					placeholder="Hola buenas tardes..."></textarea>
+			</p>
 
-            <h4>Selecione continente</h4>
-            <p>
-                <select>
-                    <option value="1">Africa</option>
-                    <option value="2">Asia</option>
-                    <option value="3" selected>America</option>
+			<p>
+				<input type="submit" value="Enviar solicitud de contacto">
+			</p>
+		</form>
+	</div>
 
-                </select>
-            </p>
-
-            <p>
-                <label> Ingrese su mensaje: </label>
-                <br> </br>
-                <textarea name="mensaje" id="formMensaje" rows="6" cols="40"
-                    placeholder="Hola buenas tardes..."></textarea>
-            </p>
-
-            <p>
-                <input type="submit" value="Enviar solicitud de contacto">
-            </p>
-        </form>
-    </div>
 
 
     <!-- So yes, in a way:
