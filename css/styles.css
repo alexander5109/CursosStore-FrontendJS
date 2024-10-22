@@ -30,9 +30,9 @@
 :root {
     /* font-size: 90%; */
 
-    * {
+    /* * { */
         /* font-family: RingBearer; */
-    }
+    /* } */
 
     body {
         margin: 0;
@@ -120,6 +120,18 @@
         margin: 0;
     }
 
+	
+	.text-overlay {
+		position: absolute;
+		/* color: white; /* Choose a color that contrasts with the image */
+		font-size: 3rem;
+		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Optional: Add text shadow for better readability */
+		padding-bottom: 8rem; /* Adds space from the top of the container */
+        color: rgb(0, 0, 0);
+        font-family: RingBearer;
+	}
+	
+
 	article p {
 		font-family: 'Source Code Pro', monospace;
 	}
@@ -175,19 +187,6 @@
     }
 
 
-
-    .footer-container {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        padding: 0rem;
-        /* width: 50vw; */
-        /* 50% of the viewport width */
-        text-align: center;
-        background-color: rgba(85, 55, 9, 0.75);
-        background-color: rgba(47, 23, 15, 0.9);
-        background-color: rgba(66, 39, 12, 0.85);
-    }
 
 
     /* ----------------NavBar---------------- */
@@ -280,3 +279,21 @@
         display: block;
         margin: 0 auto;
     }
+	
+	
+    /* ----------------footer---------------- */
+    footer {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 0rem;
+        /* width: 50vw; */
+        /* 50% of the viewport width */
+        text-align: center;
+        background-color: rgba(85, 55, 9, 0.75);
+        background-color: rgba(47, 23, 15, 0.9);
+        background-color: rgba(66, 39, 12, 0.85);
+    }
+
+
+}
