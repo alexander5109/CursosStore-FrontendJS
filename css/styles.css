@@ -28,7 +28,7 @@
 #----------------------------------------------------------------------*/
 
 :root {
-    font-size: 90%;
+    /* font-size: 90%; */
 
     * {
         /* font-family: RingBearer; */
@@ -70,29 +70,22 @@
         text-align: center;
         color: brown;
         color: rgb(212, 162, 25);
-
         font-size: 3rem;
         font-family: RingBearer;
-
         margin: 2rem;
-        /* Removes any default margin */
-
     }
-
-    .titulo,
-    .subtitulo {
+	
+    h1 .titulo, .subtitulo {
         display: block;
         line-height: 1;
-        /* Sets the same line height for consistency */
         margin: 1.5rem;
-        /* Removes any default margin */
     }
 
-    .titulo {
+	h1 .titulo {
         font-size: 90%;
     }
 
-    .subtitulo {
+	h1 .subtitulo {
         font-size: 110%;
         color: rgb(255, 255, 255);
         font-family: SachaWynterTight;
@@ -104,18 +97,36 @@
     /* ----------------HeadersParaCuerpo---------------- */
     h2 {
         text-align: center;
-        /* color: brown; */
-        /* color: rgb(212, 162, 25); */
-
-
         color: rgb(206, 54, 34);
         color: hsl(40, 50%, 40%);
-        font-weight: 500;
+        color: black;
         font-size: 2rem;
-        /* font-family: RingBearer; */
-        font-family: SachaWynterTight;
     }
 
+	h2 .titulo {
+        font-weight: 500;
+        font-size: 50%;
+        font-family: SachaWynterTight;
+		padding: 0;
+        margin: 0;
+    }
+
+	h2 .subtitulo {
+        font-weight: 100;
+        font-size: 150%;
+        color: rgb(0, 0, 0);
+        font-family: RingBearer;
+		padding: 0;
+        margin: 0;
+    }
+
+	article p {
+		font-family: 'Source Code Pro', monospace;
+	}
+
+
+
+    /* ----------------HeadersParaCuerpo---------------- */
     h3 {
         /* display: inline; */
         /* display: block; */
@@ -139,10 +150,6 @@
 
 
     /* ----------------TituloPrincipal---------------- */
-    p {
-        font-family: googleshit;
-        text-align: center;
-    }
 
 
     article {
