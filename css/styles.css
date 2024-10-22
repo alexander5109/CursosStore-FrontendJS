@@ -30,21 +30,21 @@
 :root {
     font-size: 90%;
 
-* {
-    /* font-family: RingBearer; */
-}
+    * {
+        /* font-family: RingBearer; */
+    }
 
-body {
-	margin: 0;
-	padding: 0;
-	
-	background: url('../img/background.jpg') no-repeat center center fixed;
-	background-size: cover
-}
+    body {
+        margin: 0;
+        padding: 0;
+
+        background: url('../img/background.jpg') no-repeat center center fixed;
+        background-size: cover
+    }
 
 
 
-/*---------------------------------------------------------------------#
+    /*---------------------------------------------------------------------#
 #------------------------------Colores------------------------------#
 #---------------------------------------------------------------------*/
 
@@ -65,210 +65,211 @@ body {
 			330 bordó
 	*/
 
-/* ----------------TituloPrincipal---------------- */
-h1 {
-    text-align: center;
-    color: brown;
-    color: rgb(212, 162, 25);
+    /* ----------------TituloPrincipal---------------- */
+    h1 {
+        text-align: center;
+        color: brown;
+        color: rgb(212, 162, 25);
 
-    font-size: 3rem;
-    font-family: RingBearer;
-	
-    margin: 2rem; /* Removes any default margin */
-	
-	/* margin-block-start: 0.67em; */
-    /* margin-block-end: 0.67em; */
-    /* margin-inline-start: 0px; */
-    /* margin-inline-end: 0px; */
-}
+        font-size: 3rem;
+        font-family: RingBearer;
 
-.titulo, .subtitulo {
-    display: block;
-    line-height: 1; /* Sets the same line height for consistency */
-    margin: 1.5rem; /* Removes any default margin */
-}
+        margin: 2rem;
+        /* Removes any default margin */
 
-.titulo {
-    font-size: 90%;
-}
+    }
 
-.subtitulo {
-    font-size: 110%;
-    color: rgb(255, 255, 255);
-    font-family: SachaWynterTight;
-}
+    .titulo,
+    .subtitulo {
+        display: block;
+        line-height: 1;
+        /* Sets the same line height for consistency */
+        margin: 1.5rem;
+        /* Removes any default margin */
+    }
 
+    .titulo {
+        font-size: 90%;
+    }
 
-
-
-/* ----------------HeadersParaCuerpo---------------- */
-h2 {
-    text-align: center;
-    /* color: brown; */
-    /* color: rgb(212, 162, 25); */
-	
-	
-    color: rgb(206, 54, 34);
-    color: hsl(40, 50%, 40%);
-    font-weight: 500;
-    font-size: 2rem;
-    /* font-family: RingBearer; */
-    font-family: SachaWynterTight;
-}
-
-h3 {
-    /* display: inline; */
-    /* display: block; */
-    color: hsl(40, 50%, 40%);
-    font-size: 1.3rem;
-    font-weight: 200;
-    font-style: italic;
-    font-family: SachaWynterTight;
-}
-
-
-h4 {
-    /* display: inline; */
-    /* display: block; */
-    color: hsl(40, 50%, 40%);
-    font-size: 1rem;
-    font-weight: 200;
-    font-style: italic;
-    padding: 0;
-}
-
-
-/* ----------------TituloPrincipal---------------- */
-p {
-	font-family: googleshit;
-    text-align: center;
-}
-
-
-article {
-    /* display: flex; */
-    justify-content: center;
-    margin: 1rem auto;
-    padding: 1rem;
-    width: 50vw;
-    text-align: center;
-	background-color: #f6e1c5;
-    border-radius: 15px;
-}
-
-.text-container {
-    display: flex;
-    justify-content: center;
-    margin: 1rem auto;
-    padding: 0.5rem;
-    width: 50vw;
-    text-align: center;
-	background-color: #f6e1c5;
-    border-radius: 15px;
-}
+    .subtitulo {
+        font-size: 110%;
+        color: rgb(255, 255, 255);
+        font-family: SachaWynterTight;
+    }
 
 
 
-.footer-container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    padding: 0rem;
-    /* width: 50vw; */
-    /* 50% of the viewport width */
-    text-align: center;
-    background-color: rgba(85, 55, 9, 0.75); 
-    background-color: rgba(47, 23, 15, 0.9);
-	background-color: rgba(66, 39, 12, 0.85);
-}
+
+    /* ----------------HeadersParaCuerpo---------------- */
+    h2 {
+        text-align: center;
+        /* color: brown; */
+        /* color: rgb(212, 162, 25); */
 
 
-/* ----------------NavBar---------------- */
-.nav-container {
-    display: flex;
-    justify-content: center;
-    padding: 0.7rem 0;
-	margin: 2rem 0;
-    background-color: rgba(85, 55, 9, 0.75); 
-    background-color: rgba(47, 23, 15, 0.9);
-	background-color: rgba(66, 39, 12, 0.85);
-}
+        color: rgb(206, 54, 34);
+        color: hsl(40, 50%, 40%);
+        font-weight: 500;
+        font-size: 2rem;
+        /* font-family: RingBearer; */
+        font-family: SachaWynterTight;
+    }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    margin: 0 1rem;
-    font-size: 1.5rem;
-	color: rgb(255, 255, 255);
-    text-decoration: none; 
-    font-family: RingBearer;
-}
+    h3 {
+        /* display: inline; */
+        /* display: block; */
+        color: hsl(40, 50%, 40%);
+        font-size: 1.3rem;
+        font-weight: 200;
+        font-style: italic;
+        font-family: SachaWynterTight;
+    }
 
 
-
-/* ----------------Formulario---------------- */
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-}
-
-.form_label {
-    font-family: SachaWynterTight;
-    font-size: 55%;
-}
-
-form {
-    width: auto;
-    /* Fixed width, or you can use percentage */
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-	background-color: #f6e1c5;
-    border-radius: 15px;
-}
+    h4 {
+        /* display: inline; */
+        /* display: block; */
+        color: hsl(40, 50%, 40%);
+        font-size: 1rem;
+        font-weight: 200;
+        font-style: italic;
+        padding: 0;
+    }
 
 
-#python-label
+    /* ----------------TituloPrincipal---------------- */
+    p {
+        font-family: googleshit;
+        text-align: center;
+    }
 
-/* Selector de ID's */
-    {
-    color: orange;
-}
+
+    article {
+        /* display: flex; */
+        justify-content: center;
+        margin: 1rem auto;
+        padding: 1rem;
+        width: 50vw;
+        text-align: center;
+        background-color: #f6e1c5;
+        border-radius: 1rem;
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+        padding: 0.5rem;
+        width: 50vw;
+        text-align: center;
+        background-color: #f6e1c5;
+        border-radius: 1rem;
+    }
 
 
-/* ----------------Imagenes---------------- */
-.img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 45vw;
-    margin: auto;
-    border-radius: 0;
-    padding: 10px;
-}
 
-.img-container img {
-    border-radius: 15px;
-    /* Rounds the corners of the image */
-    max-width: 100%;
-    /* Makes the image responsive */
-    height: auto;
-    /* Maintains the aspect ratio */
-    border: 5px solid rgba(47, 23, 15, 0.9);
-    /* Colored border */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* Slight shadow around the image */
-}
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 0rem;
+        /* width: 50vw; */
+        /* 50% of the viewport width */
+        text-align: center;
+        background-color: rgba(85, 55, 9, 0.75);
+        background-color: rgba(47, 23, 15, 0.9);
+        background-color: rgba(66, 39, 12, 0.85);
+    }
 
-img {
-    display: block;
-    margin: 0 auto;
-}
+
+    /* ----------------NavBar---------------- */
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        padding: 0.7rem 0;
+        margin: 2rem 0;
+        background-color: rgba(85, 55, 9, 0.75);
+        background-color: rgba(47, 23, 15, 0.9);
+        background-color: rgba(66, 39, 12, 0.85);
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-family: RingBearer;
+    }
+
+
+
+    /* ----------------Formulario---------------- */
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .form_label {
+        font-family: SachaWynterTight;
+        font-size: 55%;
+    }
+
+    form {
+        width: auto;
+        /* Fixed width, or you can use percentage */
+        padding: 1rem;
+        border: 5px solid #ccc;
+        margin: 1rem auto;
+        background-color: #f6e1c5;
+        border-radius: 1rem;
+    }
+
+
+    #python-label
+
+    /* Selector de ID's */
+        {
+        color: orange;
+    }
+
+
+    /* ----------------Imagenes---------------- */
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 45vw;
+        margin: auto;
+        border-radius: 0;
+        padding: 10px;
+    }
+
+    .img-container img {
+        max-width: 100%;
+        /* Makes the image responsive */
+        height: auto;
+        /* Maintains the aspect ratio */
+        border-radius: 1rem;
+        border: 0.35rem solid rgba(47, 23, 15, 0.9);
+        box-shadow: 0 0 1rem 0.5rem rgba(47, 23, 15, 0.9);
+        /* degradado */
+    }
+
+
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
