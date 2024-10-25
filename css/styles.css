@@ -2,71 +2,71 @@
 #--------------------------------Fuentes--------------------------------#
 #----------------------------------------------------------------------*/
 @font-face {
-    font-family: 'SachaWynterTight';
-    src: url('fonts/sachwt_.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'SachaWynterTight';
+	src: url('fonts/sachwt_.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'RingBearer';
-    src: url('fonts/RINGM__.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'RingBearer';
+	src: url('fonts/RINGM__.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'Harrington';
-    src: url('fonts/HARNGTON.TTF.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Harrington';
+	src: url('fonts/HARNGTON.TTF.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 /*----------------------------------------------------------------------#
 #--------------------------------MEdiaQueries---------------------------------#
 #----------------------------------------------------------------------*/
 
 /* Applies only if the viewport is 600px or less (mobile devices) */
-@media (max-width: 600px) {
-    * {
-        /* font-size: 100%; */
-        /* background-color: lightgray; */
-    }
-}
+/* @media (max-width: 600px) { */
+	/* * { */
+		/* font-size: 100%; */
+		/* background-color: lightgray; */
+	/* } */
+/* } */
 
 /* Applies only if the viewport is 900px or more (desktop screens) */
-@media (min-width: 900px) {
-    * {
-        /* font-size: 90%; */
-        /* background-color: lightblue; */
-    }
-}
+/* @media (min-width: 900px) {
+	* { */
+		/* font-size: 90%; */
+		/* background-color: lightblue; */
+	/* }
+} */
 /*----------------------------------------------------------------------#
 #--------------------------------Global---------------------------------#
 #----------------------------------------------------------------------*/
 
 :root {
-    /* font-size: 90%; */
+	/* font-size: 90%; */
 
-    /* * { */
-    /* font-family: RingBearer; */
-    /* } */
+	/* * { */
+	/* font-family: RingBearer; */
+	/* } */
 
-    body {
-        margin: 0;
-        padding: 0;
-        background: url('../img/background.jpg') no-repeat center center fixed;
-        background-size: cover
-    }
+	body {
+		margin: 0;
+		padding: 0;
+		background: url('../img/background.jpg') no-repeat center center fixed;
+		background-size: cover
+	}
 
 
 
-    /*---------------------------------------------------------------------#
+	/*---------------------------------------------------------------------#
 #------------------------------Colores------------------------------#
 #---------------------------------------------------------------------*/
 
-    /* Un verde puro */
+	/* Un verde puro */
 
-    /* Hue primarios:
+	/* Hue primarios:
 	0 rojo
 			30 naranja
 		60 amarillo
@@ -81,235 +81,249 @@
 			330 bordó
 	*/
 
-    /* ----------------TituloPrincipal---------------- */
-    h1 {
-        text-align: center;
-        color: brown;
-        color: rgb(212, 162, 25);
-        font-size: 3rem;
-        font-family: RingBearer;
-        margin: 2rem;
-    }
 
-    h1 .titulo,
-    .subtitulo {
-        display: block;
-        line-height: 1;
-        margin: 1.5rem;
-    }
+/* -----------------------------1.header-1.titulos---------------------------------- */
+	header > div {
+		margin: 2.5rem 0;
+	}
+	header > div > h1 {
+		font-family: RingBearer;
+		line-height: 1;
+		margin: 1.5rem;
+		text-align: center;
+		color: rgb(212, 162, 25);
+		font-size: 2.25rem;
+	}
 
-    h1 .titulo {
-        font-size: 90%;
-    }
+	header > div > h2 {
+		font-family: SachaWynterTight;
+		line-height: 1;
+		margin: 1.5rem;
+		text-align: center;
+		color: rgb(255, 255, 255);
+		font-size: 3.25rem;
+	}
+/* -----------------------------1.header-2.navbar---------------------------------- */
+	header > nav {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 0 0;
+		margin: 3rem 0;
+		background-color: rgba(85, 55, 9, 0.75);
+		background-color: rgba(47, 23, 15, 0.9);
+		background-color: rgba(66, 39, 12, 0.85);
+	}
 
-    h1 .subtitulo {
-        font-size: 110%;
-        color: rgb(255, 255, 255);
-        font-family: SachaWynterTight;
-    }
+	header > nav > a {
+		font-size: 1.5rem;
+		color: rgb(255, 255, 255);
+		text-decoration: none;
+		font-family: RingBearer;
+		display: block;
+		padding: 1rem 4vw;
+	}
 
-
-
-
-    /* ----------------HeadersParaCuerpo---------------- */
-    h2 {
-        text-align: center;
-        color: rgb(206, 54, 34);
-        color: hsl(40, 50%, 40%);
-        color: black;
-        font-size: 2rem;
-    }
-
-    h2 .titulo {
-        font-weight: 500;
-        font-size: 50%;
-        font-family: SachaWynterTight;
-        padding: 0;
-        margin: 0;
-    }
-
-    h2 .subtitulo {
-        font-weight: 100;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-        font-family: RingBearer;
-        padding: 0;
-        margin: 0;
-    }
-
-
-    article p {
-        font-family: 'Source Code Pro', monospace;
-    }
-
-
-
-    /* ----------------HeadersParaCuerpo---------------- */
-    h3 {
-        /* display: inline; */
-        /* display: block; */
-        color: hsl(40, 50%, 40%);
-        font-size: 1.3rem;
-        font-weight: 200;
-        font-style: italic;
-        font-family: SachaWynterTight;
-    }
-
-
-    h4 {
-        /* display: inline; */
-        /* display: block; */
-        color: hsl(40, 50%, 40%);
-        font-size: 1rem;
-        font-weight: 200;
-        font-style: italic;
-        padding: 0;
-    }
-
-
-    /* ----------------TituloPrincipal---------------- */
-
-
-    article {
-        /* display: flex; */
-        justify-content: center;
-        margin: 1rem auto;
-        padding: 1rem;
-        width: 50vw;
-        /* text-align: center; */
-        background-color: #f6e1c5;
-        border-radius: 1rem;
-    }
-
-    .text-container {
-        display: flex;
-        justify-content: center;
-        margin: 1rem auto;
-        padding: 0.5rem;
-        width: 50vw;
-        text-align: center;
-        background-color: #f6e1c5;
-        border-radius: 1rem;
-    }
-
-
-
-
-    /* ----------------NavBar---------------- */
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        padding: 0.7rem 0;
-        margin: 2rem 0;
-        background-color: rgba(85, 55, 9, 0.75);
-        background-color: rgba(47, 23, 15, 0.9);
-        background-color: rgba(66, 39, 12, 0.85);
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav a {
-        margin: 0 1rem;
-        font-size: 1.5rem;
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        font-family: RingBearer;
-    }
-
-
-
-    /* ----------------Formulario---------------- */
-    .form-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .form_label {
-        font-family: SachaWynterTight;
-        font-size: 55%;
-    }
-
-    form {
-        width: auto;
-        /* Fixed width, or you can use percentage */
-        padding: 1rem;
-        border: 5px solid #ccc;
-        margin: 1rem auto;
-        background-color: #f6e1c5;
-        border-radius: 1rem;
-    }
-
-
-    #python-label
-
-    /* Selector de ID's */
-        {
-        color: orange;
-    }
-
-
-    /* ----------------Imagenes---------------- */
-	/* img { */
-		/* width: 100%; */
+	header > nav > a:hover {
+		background-color: #575757;
+		background-color: rgba(66, 39, 12, 1);
+		border-radius: 1.5rem; 
+	}
+	
+	
+/* -----------------------------2.main----------------------------------- */
+	main > img {
+		/* max-width: 100%; */
 		/* height: auto; */
-		/* border-radius: 10px; */
-	/* } */
-
-     /* { */
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* height: 35hv; */
-        /* width: 45vw; */
-        /* width: 45vw; */
-        /* margin: auto; */
-        /* border-radius: 0; */
-        /* padding: 10px; */
-    /* } */
-
-    .img-container img {
-        /* max-width: 100%; */
-        /* height: auto; */
-        /* height: 25hv; */
+		/* height: 25hv; */
 		max-width: 80vw;
 		max-height: 45vh;
-        border-radius: 2rem;
-        border: 0.35rem solid rgba(47, 23, 15, 0.85);
-        box-shadow: 0 0 1rem 0.75rem rgba(47, 23, 15, 0.9);
-        display: block;
-        margin: 0 auto;
-    }
+		border-radius: 2rem;
+		border: 0.35rem solid rgba(47, 23, 15, 0.85);
+		box-shadow: 0 0 1rem 0.75rem rgba(47, 23, 15, 0.9);
+		display: block;
+		margin: 0 auto;
+	}
+/* ----------------------------2.main-1.articulos------------------------ */
+	article {
+		justify-content: center;
+		margin: 1rem auto;
+		padding: 1rem;
+		width: 50vw;
+		text-align: center;
+		background-color: #f6e1c5;
+		border-radius: 1rem;
+	}
+	article > h1 {
+		/* display: inline; */
+		/* display: block; */
+		color: hsl(40, 50%, 40%);
+		font-size: 1.2rem;
+		font-weight: 200;
+		font-style: italic;
+		font-family: SachaWynterTight;
+	}
+	article > h2 {
+		font-family: SachaWynterTight;
+		font-size: 1.66rem;
+		font-weight: 500;
+		padding: 0;
+		margin: 0;
+		padding: 0.5rem;
+	}
+	article > h3 {
+		font-family: RingBearer;
+		font-size: 1.2rem;
+		font-weight: 100;
+		padding: 0;
+		margin: 0;
+		padding: 0.5rem;
+	}
+	article > h4 {
+		font-family: 'Source Code Pro', monospace;
+		/* text-align: center; */
+	}
+	
+	article > p {
+		font-family: 'Source Code Pro', monospace;
+		/* text-align: center; */
+	}
+	article > audio {
+		width: 100%; 
+		margin: 2rem 0;
+	}
+	
 
-    .text-overlay {
-        position: absolute;
-        font-size: 2rem;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-        padding-bottom: 8rem;
-        color: rgb(0, 0, 0);
-        /* font-family: RingBearer; */
-    }
+/* ----------------------------2.main-2.forms------------------------ */
+	.form-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: auto;
+	}
 
-    /* ----------------footer---------------- */
-    footer {
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        padding: 0rem;
-        /* width: 50vw; */
-        /* 50% of the viewport width */
-        text-align: center;
-        background-color: rgba(85, 55, 9, 0.75);
-        background-color: rgba(47, 23, 15, 0.9);
-        background-color: rgba(66, 39, 12, 0.85);
-    }
+	form {
+		width: auto;
+		padding: 1rem;
+		border: 5px solid #ccc;
+		margin: 1rem auto;
+		background-color: #f6e1c5;
+		border-radius: 1rem;
+	}
+
+	form > div {
+		margin: 3rem 0;
+	}
+
+	form > div {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0.7rem
+	}
+
+	form > label {
+		font-family: SachaWynterTight;
+	}
+	
+	input {
+		width: 80%;
+	}
+	
+	input[type="radio"], input[type="checkbox"], input[type="number"] {
+		width: auto;
+	}
+	
+	input[type="submit"] {
+		margin: 1rem;
+		font-family: SachaWynterTight;
+		background-color: rgba(105, 62, 19, 0.85);
+		color: #ffffff; /* White text color */
+		border: none; /* Remove default border */
+		border-radius: 10px; /* Rounded edges */
+		padding: 0.5rem 1rem; /* Padding for better size */
+		font-size: 0.7rem; /* Font size */
+		cursor: pointer; /* Cursor changes to pointer on hover */
+		transition: background-color 0.3s ease; /* Smooth background color change */
+	}
+
+	input[type="submit"]:hover {
+		background-color: #9c490d; /* Darker brown-orange on hover */
+	}
+	
+	form h1 {
+		font-family: SachaWynterTight;
+		text-align: center;
+		color: hsl(40, 49%, 25%);
+		font-size: 1.2rem;
+		font-weight: 400;
+		padding: 0;
+	}
+	
+	form h2 {
+		text-align: center;
+		font-family: RingBearer;
+		color: hsl(40, 50%, 40%);
+		font-size: 1.2rem;
+		font-weight: 200;
+		padding: 0;
+	}
+	
+	form h3 {
+		text-align: center;
+		font-family: RingBearer;
+		color: hsl(40, 50%, 40%);
+		font-size: 1rem;
+		font-weight: 200;
+		font-style: italic;
+		padding: 0;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/* ----------------------------3.footer------------------------ */
+	footer {
+		display: flex;
+		justify-content: center;
+		margin: auto;
+		padding: 0rem;
+		text-align: center;
+		background-color: rgba(85, 55, 9, 0.75);
+		background-color: rgba(47, 23, 15, 0.9);
+		background-color: rgba(66, 39, 12, 0.85);
+	}
+	footer > p {
+		font-size: 0.9rem; /* Slightly smaller font for a more formal look */
+		font-weight: 400; /* Normal font weight for readability */
+		color: white; /* A medium gray color for a serious tone */
+		text-align: center; /* Center the text in the footer */
+		margin: 1.5rem 0; /* Add some space above and below the paragraph */
+		padding: 0.5rem 0; /* Slight padding for extra spacing */
+		border-top: 1px solid #cccccc; /* Thin top border for separation */
+	}
+
+
+
+
+
+
+
+
 
 
 }

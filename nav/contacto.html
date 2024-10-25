@@ -9,146 +9,145 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-	<header>
-		<h1>
-			<span class="titulo">Academia de Programación Minotauro</span>
-			<span class="subtitulo">Contacto</span>
-		</h1>
-		<div class="nav-container">
-			<nav>
-				<a href="../index.html">Home</a>
-				<a href="../nav/cursos.html">Cursos</a>
-				<a href="../nav/about.html">About</a>
-				<a href="../nav/contacto.html">Contacto</a>
-			</nav>
-		</div>
-	</header>
-
-	<div class="img-container">
-		<p><img src="../img/macri.gif" alt="gif boludo"></p>
-	</div>
 
 
-	<!-- <div class="text-container"> -->
-	<div class="text-container">
-		<h3> Dejá tus datos acá y nosotros te contactamos...</h3>
-	</div>
-	<!-- (?=.*\d): Ensures the password contains at least one digit.
-    (?=.*[a-z]): Ensures the password contains at least one lowercase letter.
-    (?=.*[A-Z]): Ensures the password contains at least one uppercase letter.
-    (?=.*[@$!%*?&]): Ensures the password contains at least one special character from the set @$!%*?& (you can add/remove special characters as per your requirements).
-    [A-Za-z\d@$!%*?&]{8,}: Ensures the total length is at least 8 characters, and the allowed characters include letters, digits, and the specified special characters. -->
 
+
+
+
+<header>
+    <div>
+        <h1>Academia de Programación Minotauro</h1>
+        <h2>Contacto</h2>
+    </div>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../nav/cursos.html">Cursos</a>
+        <a href="../nav/about.html">About</a>
+        <a href="../nav/contacto.html">Contacto</a>
+    </nav>
+</header>
+
+
+
+
+
+
+<main>
+	<img src="../img/macri.gif" alt="gif boludo">
+	<article>
+		<h1> Deje sus datos que nosotros lo contactamos...</h1>
+	</article>
 	<div class="form-container">
 		<!-- <form action="../code201.html" method="POST"> -->
+		
+		
 		<form action="https://formspree.io/f/mrbgbqwy" method="POST">
-			<h4>Basicos</h4>
+			<section>
+			<h1>Formulario para contactarnos</h1>
+				<div>
+					<h2>Basicos</h2>
+					<label for="formInputName">Nombre: </label>
+					<input name="name" type="text" id="formInputName" size="20" placeholder="Escribi tu nombre guachin" maxlength="25" minlength="5">
+				</div>
+				<div>
+					<label for="formInputCorreo">Correo: </label>
+					<input name="correo" type="email" id="formInputCorreo" size="20" placeholder="Escribi tu correo guachin" maxlength="25" minlength="5" required>
+				</div>
+				<div>
+					<label for="formInputEdad">Edad: </label>
+					<input name="edad" type="number" id="formInputEdad" size="6" min="18" max="120" placeholder="Escribi tu edad guachin" value="17" required>
+				</div>
+			</section>
 
-			<p>
-				<label class="form_label" for="formInputName">Nombre: </label>
-				<input name="name" type="text" id="formInputName" size="30" placeholder="Escribi tu nombre guachin"
-					maxlength="25" minlength="5">
-			</p>
 
-			<p>
-				<label class="form_label" for="formInputCorreo">Correo: </label>
-				<input name="correo" type="email" id="formInputCorreo" size="30" placeholder="Escribi tu correo guachin"
-					maxlength="25" minlength="5" required>
-			</p>
 
-			<p>
-				<label class="form_label" for="formInputEdad">Edad: </label>
-				<input name="edad" type="number" id="formInputEdad" size="25" min="18" max="120"
-					placeholder="Escribi tu edad guachin" value="17" required>
-			</p>
 
-			<h4>RadioButtons</h4>
-
-			<p>
-				<label class="form_label" for="php">PHP</label>
+			<div>
+				<h2>RadioButtons</h2>
+				<label for="php">PHP</label>
 				<input name="language" type="radio" id="php" value="php">
-			</p>
 
-			<p>
-				<label class="form_label" for="python2">Python 2</label>
+				<label for="python2">Python 2</label>
 				<input name="language" type="radio" id="python2" value="python2">
-			</p>
 
-			<p>
-				<label style="font-style: italic; font-weight: 900;" class="form_label" for="python3">Python 3</label>
+				<label style="font-style: italic; font-weight: 900;" for="python3">Python 3</label>
 				<input name="language" type="radio" id="python3" value="python3">
-			</p>
 
-			<p>
-				<label class="form_label" for="csharp">C#</label>
+				<label for="csharp">C#</label>
 				<input name="language" type="radio" id="csharp" value="csharp">
-			</p>
 
-			<p>
-				<label class="form_label" for="java">Java</label>
+				<label for="java">Java</label>
 				<input name="language" type="radio" id="java" value="java">
-			</p>
+			</div>
 
-			<h4>Checkboxes</h4>
-			<p>
-				<label class="form_label" for="estudiando">Estudiante</label>
+
+
+
+			<div>
+				<h2>Checkboxes</h2>
+				<label for="estudiando">Estudiante</label>
 				<input name="estudiando" type="checkbox" id="estudiando" value="yes">
-			</p>
 
-			<p>
-				<label class="form_label" for="trabajando">Trabajando</label>
+				<label for="trabajando">Trabajando</label>
 				<input name="trabajando" type="checkbox" id="trabajando" value="yes">
-			</p>
 
-			<p>
-				<label class="form_label" for="casado">Casado</label>
+				<label for="casado">Casado</label>
 				<input name="casado" type="checkbox" id="casado" value="yes">
-			</p>
+			</div>
 
-			<h4>Suba su DNI</h4>
-			<p>
-				<label class="form_label" for="archivo">Archivo: </label>
-				<input name="archivo" id="archivo" type="file">
-			</p>
 
-			<h4>Seleccione continente</h4>
-			<p>
-				<label class="form_label" for="continente">Continente:</label>
+
+
+			<div>
+				<h2>Suba su DNI</h3>
+				<input name="archivo" type="file">
+			</div>
+
+
+
+
+			<div>
+				<h2>Seleccione continente</h3>
 				<select name="continente" id="continente">
 					<option value="1">Africa</option>
 					<option value="2">Asia</option>
 					<option value="3" selected>America</option>
 				</select>
-			</p>
+			</div>
+			
+			
 
-			<p>
-				<label for="formMensaje">Ingrese su mensaje: </label>
-				<br>
-				<textarea name="mensaje" id="formMensaje" rows="6" cols="40"
-					placeholder="Hola buenas tardes..."></textarea>
-			</p>
+			<div>
+				<h2>Deje su mensaje aqui:</h3>
+				<textarea name="mensaje" rows="6" cols="40"placeholder="Hola buenas tardes..."></textarea>
+			</div>
 
-			<p>
+
+
+			<div>
 				<input type="submit" value="Enviar solicitud de contacto">
-			</p>
+			</div>
 		</form>
 	</div>
 
-
-
-	<!-- So yes, in a way:
-
-    name is mainly for the backend to process form data correctly.
-    id is mainly for the frontend to link elements with labels, apply styles, and efficiently manipulate the DOM. -->
+</main>
 
 
 
 
-	<footer>
-		<p>&copy; 2024 Mi Pagina SoloFront. Todos los derechos reservados.</p>
-	</footer>
+
+
+<footer>
+	<p>&copy; 2024 Mi Pagina SoloFront para TalentoTech. Todos los derechos reservados.</p>
+</footer>
+	
+	
+	
+	
+	
+	
+	
 </body>
-
 </html>
