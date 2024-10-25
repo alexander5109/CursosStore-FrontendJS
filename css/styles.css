@@ -21,8 +21,25 @@
     font-weight: normal;
     font-style: normal;
 }
+/*----------------------------------------------------------------------#
+#--------------------------------MEdiaQueries---------------------------------#
+#----------------------------------------------------------------------*/
 
+/* Applies only if the viewport is 600px or less (mobile devices) */
+@media (max-width: 600px) {
+    * {
+        /* font-size: 100%; */
+        /* background-color: lightgray; */
+    }
+}
 
+/* Applies only if the viewport is 900px or more (desktop screens) */
+@media (min-width: 900px) {
+    * {
+        /* font-size: 90%; */
+        /* background-color: lightblue; */
+    }
+}
 /*----------------------------------------------------------------------#
 #--------------------------------Global---------------------------------#
 #----------------------------------------------------------------------*/
@@ -262,8 +279,8 @@
         /* max-width: 100%; */
         /* height: auto; */
         /* height: 25hv; */
-		/* width: 50vw; */
-		height: 45vh;
+		max-width: 80vw;
+		max-height: 45vh;
         border-radius: 2rem;
         border: 0.35rem solid rgba(47, 23, 15, 0.85);
         box-shadow: 0 0 1rem 0.75rem rgba(47, 23, 15, 0.9);
