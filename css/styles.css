@@ -115,7 +115,17 @@
 		background-color: rgba(66, 39, 12, 0.85);
 	}
 
-	header > nav > a {
+	header nav ul {
+
+		list-style-type: none; 
+		display: flex; /* Coloca los elementos de la lista en línea */
+		padding: 0;
+		margin: 0;
+		display: flex; /* Coloca los elementos de la lista en línea */
+		justify-content: space-evenly; /* Espacia los elementos de manera uniforme */
+	}
+
+	header > nav li a {
 		font-size: 1.5rem;
 		color: rgb(255, 255, 255);
 		text-decoration: none;
@@ -124,7 +134,7 @@
 		padding: 1rem 4vw;
 	}
 
-	header > nav > a:hover {
+	header > nav li a:hover {
 		background-color: #575757;
 		background-color: rgba(66, 39, 12, 1);
 		border-radius: 1.5rem; 
