@@ -1,9 +1,9 @@
 # Proyecto de Frontend - Talento Tech Front End JS
 
-### Autor: Alexander Seling
-### Curso: Talento Tech Front End JS
-### 2024, Noviembre 12
-### Instructor: Nicolas Fernandez
+* Autor: Alexander Seling
+* Curso: Talento Tech Front End JS
+* 2024, Noviembre 12
+* Instructor: Nicolas Fernandez
 
 ## Descripción del Proyecto
 
