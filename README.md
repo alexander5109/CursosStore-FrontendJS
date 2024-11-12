@@ -42,13 +42,13 @@ A continuación, se presentan las consignas implementadas en el proyecto:
    - En cada bloque de articulos se diseño un background con bordes redondeado que actua como marco para texto e imagenes, ademas de haber utilizado un background-image para el body de todas las paginas.
 
 7. **Sección "Productos"**:
-   - Esta sección está organizada en tarjetas (cards) y se ha diseñado de forma responsiva utilizando **Flexbox**.
+   - Esta sección está organizada en tarjetas (cards) y se han distribuido utilizando **Flexbox**.
 
 8. **Sección "Reseñas"**:
-   - La sección de reseñas está organizada con **Grid**, distribuyendo los elementos de manera lógica y estética.
+   - La sección de reseñas está organizada con **Grid**, distribuyendo los elementos en filas de tres columnas
 
 9. **Sección "Contacto"**:
-   - La sección contactos utiliza **Media Queries** para adaptarse a diferentes tamaños de pantalla.
+   - La sección contactos todavia NO utiliza **Media Queries** para adaptarse a diferentes tamaños de pantalla.
 
 10. **Multimedia**:
     - La página incluye archivos multimedia (imágenes, videos o iframes) integrados correctamente.
@@ -72,7 +72,7 @@ A continuación, se presentan las consignas implementadas en el proyecto:
 
 ## URL del Proyecto
 
-El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html](#) 
+El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html]
 
 ## Instalación y Uso
 
