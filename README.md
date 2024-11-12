@@ -2,13 +2,12 @@
 
 ### Autor: Alexander Seling
 ### Curso: Talento Tech Front End JS
+### 2024, Noviembre 12
 ### Instructor: Nicolas Fernandez
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y a la venta de paquetes de software con licencia. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva.
-
-El proyecto incluye la implementación de un carrito de compras que permite a los usuarios seleccionar y comprar cursos y software de manera eficiente. Se ha utilizado HTML, CSS y JavaScript para crear una interfaz de usuario moderna y funcional, garantizando que la experiencia de compra sea fluida y fácil de usar.
+Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y a la venta de articulos informaticos. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva. Se pretende incluir la implementación de un carrito de compras que permite a los usuarios seleccionar cursos a medida que explora el listado.
 
 ### Características Clave:
 - **Carrito de Compras**: Permite a los usuarios agregar productos y revisar su selección antes de proceder a la compra.
@@ -37,10 +36,10 @@ A continuación, se presentan las consignas implementadas en el proyecto:
    - Se han aplicado estilos a las secciones del **header**, **footer** y a la lista de navegación para una apariencia visual coherente.
 
 5. **Fuentes de Google Fonts**:
-   - Las fuentes se han implementado correctamente utilizando Google Fonts.
+   - Se ha implementado al menos una fuente desde Google Fonts pero las que mas se utilizan fueron cargadas localmente.
 
 6. **Propiedades de background**:
-   - En alguna sección de la página, se han aplicado propiedades de fondo, tales como color, imagen o degradado.
+   - En cada bloque de articulos se diseño un background con bordes redondeado que actua como marco para texto e imagenes, ademas de haber utilizado un background-image para el body de todas las paginas.
 
 7. **Sección "Productos"**:
    - Esta sección está organizada en tarjetas (cards) y se ha diseñado de forma responsiva utilizando **Flexbox**.
@@ -49,7 +48,7 @@ A continuación, se presentan las consignas implementadas en el proyecto:
    - La sección de reseñas está organizada con **Grid**, distribuyendo los elementos de manera lógica y estética.
 
 9. **Sección "Contacto"**:
-   - Esta sección es completamente responsiva, utilizando **Media Queries** para adaptarse a diferentes tamaños de pantalla.
+   - La sección contactos utiliza **Media Queries** para adaptarse a diferentes tamaños de pantalla.
 
 10. **Multimedia**:
     - La página incluye archivos multimedia (imágenes, videos o iframes) integrados correctamente.
@@ -58,7 +57,7 @@ A continuación, se presentan las consignas implementadas en el proyecto:
     - Se ha implementado una lista desordenada con enlaces que simulan una navegación interna (Inicio, Productos, Contacto, etc.).
 
 12. **Hosting**:
-    - El proyecto está desplegado en un hosting gratuito, accesible en una URL funcional para la visualización del sitio.
+    - El proyecto está subido a un repositorio personal de github y desplegado mediante GitHub Pages.
 
 ## Tecnologías Utilizadas
 
@@ -69,7 +68,7 @@ A continuación, se presentan las consignas implementadas en el proyecto:
 - **Google Fonts** para la tipografía personalizada.
 - **Flexbox y Grid** para la disposición de los elementos.
 - **Media Queries** para la adaptación a diferentes dispositivos.
-- **Hosting** en **Netlify** o **GitHub Pages**.
+- **Hosting** en **GitHub Pages**.
 
 ## URL del Proyecto
 
