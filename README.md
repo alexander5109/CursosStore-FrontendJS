@@ -7,17 +7,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y a la venta de articulos informaticos. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva. Se pretende incluir la implementación de un carrito de compras que permite a los usuarios seleccionar cursos a medida que explora el listado.
-
-### Características Clave:
-- **Carrito de Compras**: Permite a los usuarios agregar productos y revisar su selección antes de proceder a la compra.
-- **Promoción de Cursos**: Presenta una variedad de cursos de programación, cada uno con descripciones detalladas y precios.
-- **Venta de Software**: Ofrece paquetes de software con licencia, proporcionando información clara sobre cada producto.
-- **Diseño Responsivo**: La página se adapta a diferentes tamaños de pantalla, asegurando una buena experiencia en dispositivos móviles y de escritorio.
-- **Interacción con el Usuario**: Se incluye un formulario de contacto funcional para que los usuarios puedan realizar consultas o solicitar más información.
-
-Este proyecto no solo busca ser una plataforma de ventas, sino también un recurso valioso para aquellos interesados en expandir sus conocimientos en programación y adquirir herramientas de software esenciales para su desarrollo profesional.
-
+Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y/o la venta de articulos informaticos. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva independientemente del dispositivo con el que se la visualice. Se pretende incluir la implementación de un carrito de compras que permite a los usuarios seleccionar cursos a medida que explora el listado.
 
 ## Requisitos de la Preentrega
 
@@ -72,7 +62,7 @@ A continuación, se presentan las consignas implementadas en el proyecto:
 
 ## URL del Proyecto
 
-El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html]
+El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html](https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html)
 
 ## Instalación y Uso
 
