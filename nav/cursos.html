@@ -43,16 +43,18 @@
 
 
 	<article>
-		<div class="row row-cols-1 row-cols-md-2 g-4">
+		<div class="row row-cols-1 row-cols-md-2 g-4" id="contenedor_de_cards">
 			<div class="col">
 				<div class="card">
 					<img src="https://picsum.photos/200/200?random=5" class="card-img-top" alt="Curso de Excel">
 					<div class="card-body">
 						<h5 class="card-title">Excel: Desde Básico hasta Avanzado</h5>
 						<p class="card-text">Domina Excel y optimiza tu productividad con fórmulas, tablas dinámicas, y análisis de datos. Este curso está diseñado tanto para principiantes como para usuarios avanzados que desean profundizar en herramientas de automatización y gráficos complejos.</p>
-						<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-						  Single toggle
-						</button>
+						<div class="btn-group-toggle" data-toggle="buttons">
+						  <label class="btn btn-secondary active">
+							<input type="checkbox" checked autocomplete="off"> Agregado al chango
+						  </label>
+						</div>
 						
 					</div>
 				</div>
@@ -103,6 +105,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
+	<script src="../scripts.js"></script>
 </footer>
 
 
