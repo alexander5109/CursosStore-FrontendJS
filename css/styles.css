@@ -124,6 +124,9 @@
 	
 	
 /* -----------------------------2.main----------------------------------- */
+	section {
+		display: flex;
+	}
 	main > img {
 		/* max-width: 100%; */
 		/* height: auto; */
@@ -136,6 +139,38 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+/* ----------------------------2.productos-sidebar------------------------ */
+	aside {
+		justify-content: center;
+		margin-top: 1rem;
+		margin-right: 2rem;
+		margin-left: 1rem;
+		padding: 1rem;
+		width: 30vw;
+		height: 86vh;
+		text-align: center;
+		background-color: #f6e1c5;
+		border-radius: 1rem;
+	}
+	aside > h2 {
+		font-family: SachaWynterTight;
+		font-size: clamp(1rem, 3vw, 2rem);
+		font-weight: 500;
+		padding: 0;
+		margin: 0;
+		padding: 0.5rem;
+	}
+	aside > h3 {
+		font-family: RingBearer;
+		font-size: clamp(1rem, 3vw, 2rem);
+		font-weight: 100;
+		padding: 0;
+		margin: 0;
+		padding: 0.5rem;
+	}
+	
+	
 /* ----------------------------2.main-1.articulos------------------------ */
 	article {
 		justify-content: center;
