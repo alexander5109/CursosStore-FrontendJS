@@ -169,6 +169,14 @@
 		margin: 0;
 		padding: 0.5rem;
 	}
+	aside > h4 {
+		font-family: RingBearer;
+		font-size: clamp(1rem, 2vw, 2rem);
+		font-weight: 70;
+		padding: 0;
+		margin: 0;
+		padding: 0.3rem;
+	}
 	
 	
 /* ----------------------------2.main-1.articulos------------------------ */
