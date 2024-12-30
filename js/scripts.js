@@ -1,3 +1,12 @@
+function alertItemAgregado() {
+	Swal.fire({
+		title: 'Item agregado!',
+		text: 'Agregado al chango!',
+		icon: 'success',
+		confirmButtonText: 'Aceptar'
+	});
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	let contenedor_de_cards = document.getElementById("contenedor_de_cards");
 
@@ -25,17 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
 					const cardCol = document.createElement("div");
 					cardCol.className = "col";
 
+
+					// <button onclick="showItemAddedAlert() id="agregarItem" class="btn btn-primary">Agregar</button>
 					cardCol.innerHTML = `
 						<div class="card">
 							<img src="${producto.thumbnail}" class="card-img-top" alt="${producto.title}">
 							<div class="card-body">
 								<h5 class="card-title">${producto.title}</h5>
 								<p class="card-text">${producto.description}</p>
-								<div class="btn-group-toggle" data-toggle="buttons">
-									<label class="btn btn-secondary active">
-										<input type="checkbox" checked autocomplete="off"> Agregado al chango
-									</label>
-								</div>
+								<button id="agregarItem" class="btn btn-primary">Agregar</button>
 							</div>
 						</div>
 					`;
@@ -46,6 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 			.catch((error) => console.error("Error fetching products:", error));
 	}
+	
+	
 
 	fetchProductos();
+	
+	
+	
+	
+	
+	
+	
 });
+
+
+
+

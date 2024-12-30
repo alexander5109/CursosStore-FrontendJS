@@ -171,7 +171,7 @@
 	}
 	aside > h4 {
 		font-family: RingBearer;
-		font-size: clamp(1rem, 2vw, 2rem);
+		font-size: clamp(0.7rem, 2.1vw, 1.4rem);
 		font-weight: 70;
 		padding: 0;
 		margin: 0;
