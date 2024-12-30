@@ -92,7 +92,7 @@
 		display: flex;
 		justify-content: space-evenly;
 		padding: 0;
-		margin: 3rem 0;
+		margin: 2rem 0;
 		background-color: rgba(85, 55, 9, 0.75);
 		background-color: rgba(47, 23, 15, 0.9);
 		background-color: rgba(66, 39, 12, 0.85);
@@ -108,7 +108,7 @@
 	}
 
 	header > nav li a {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		color: rgb(255, 255, 255);
 		text-decoration: none;
 		font-family: RingBearer;
@@ -177,6 +177,7 @@
 		margin: 0;
 		padding: 0.3rem;
 	}
+	
 	
 	
 /* ----------------------------2.main-1.articulos------------------------ */

@@ -8,13 +8,19 @@ function alertItemAgregado() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	
+	
+	
+	
+	
 	let contenedor_de_cards = document.getElementById("contenedor_de_cards");
 
 	function fetchProductos() {
-		let limite = 0;
-		const productos_que_me_interesan = ["laptops", "mobile-accessories", "smartphones", "tablets"];
+		let limite = 8;
+		// const productos_que_me_interesan = ["laptops", "mobile-accessories", "smartphones", "tablets"];
 		
-		fetch(`https://dummyjson.com/products?limit=0`)
+		// const baseURL = `https://dummyjson.com/products/category/laptops?limit=8';
+		fetch(`https://dummyjson.com/products/category/laptops?limit=${limite}`)
 			.then((response) => response.json())
 			.then((data) => {
 				const productos = data.products;
@@ -23,12 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				for (let i = 0; i < productos.length; i++) {
 					let producto = productos[i];
-					if (!productos_que_me_interesan.includes(producto.category)) {
-						continue;
-					} 
-					if (limite >= 8) {
-						break; // Basta
-					}
+					// if (!productos_que_me_interesan.includes(producto.category)) {
+						// continue;
+					// } 
+					// if (i >= limite) {
+						// break; // Basta
+					// }
 					
 					// Crear las cards
 					const cardCol = document.createElement("div");
@@ -43,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 								<h5 class="card-title">${producto.title}</h5>
 								<p class="card-text">${producto.description}</p>
 								<button id="agregarItem" class="btn btn-primary">Agregar</button>
+								
 							</div>
 						</div>
 					`;

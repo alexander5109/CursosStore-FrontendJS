@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>About us</title>
+	<title>Caja</title>
 	<meta charset="UTF-8">
 	<link rel="icon" href="img/caballito.ico">
 	<link rel="stylesheet" href="css/styles.css">
@@ -12,13 +12,10 @@
 </head>
 <body>
 
-
-
-
 <header>
 	<div>
 		<h1>Academia de Programación Minotauro</h1>
-		<h2>About us</h2>
+		<h2>Caja</h2>
 	</div>
 	<nav>
 		<ul>
@@ -36,23 +33,45 @@
 
 
 <main>
-	<img src="https://picsum.photos/350/200" alt="texto por si no carga la imagen">
-	
-	
-	
 	<article>
-		<h3>UN COMPROMISO CON LA EDUCACION</h3>
-		<h2>UN COMPROMISO CON VOS</h2>
+		<h3>Caja de compras</h3>
+		<h2>Carrito</h2>
 		
-		<p>Somos Academia de Programación Minotauro, una organización con mucho fin de lucro que, sin embargo, busca brindar la mejor y más actualizada educación en informatica.</p>
+		<p>La compracion.</p>
 		
-		<p>Creemos que en un mundo cada vez más digitalizado, todos merecen una oportunidad de aprender, capacitarse e incluso emprender.</p>
-    
-		<p>En tiempos donde los algoritmos deciden quién llega a fin de mes, nosotros ofrecemos una amplia gama de cursos enfocados en tecnología y desarrollo. Desde los fundamentos de la programación en Python hasta especializaciones en inteligencia artificial y desarrollo de aplicaciones, estamos aquí para ayudarte a adaptarte, dominar y, si todo va bien, dejar tu marca en un sector sin límites éticos aparentes.</p>
 		
-		<p>Estos cursos tienen la finalidad de capacitar, instruir o actualizar a trabajadores de un rubro, sin embargo, tambien consideramos nuestra oferta para personas que no han tenido un acercamiento a una rama específica del mundo laboral e incluso a personas con valores éticos creativos y auténticos.</p>
-    
-		<p>Acércate a Academia Minotauro y vamos a construir juntos un futuro donde, entre líneas de código y proyectos freelance, podamos llevar la tecnología al límite.</p>
+		
+    <!-- Carrito de compras -->
+    <div class="container mt-5">
+        <h2 class="mb-4">Carrito de Compras</h2>
+
+        <table class="table table-bordered">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-items">
+                <!-- Aquí se cargarán los productos del carrito -->
+            </tbody>
+        </table>
+
+        <div class="text-end mb-3">
+            <h4>Total: $<span id="total">0</span></h4>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button id="limpiar-carrito" class="btn btn-danger">Volver al Inicio</button>
+            <button id="finalizar-compra" class="btn btn-success">Finalizar Compra</button>
+        </div>
+    </div>
+
+		
+		
+		
 		
 	</article>
 </main>
