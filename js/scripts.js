@@ -111,22 +111,17 @@ function actualizarCarritoLateral(){
 		const miniCard = document.createElement("div");
 		miniCard.className = "card";
 		miniCard.innerHTML = `
-			<div class="card-body d-flex flex-wrap align-items-center gap-2">
+			<div class="card-body flex-wrap align-items-center gap-2">
 				<div class="flex-grow-1">
 					<h4 class="mb-1">${miniProducto.title}</h4>
 					<h5 class="text-muted mb-1">$${miniProducto.price.toLocaleString()}</h5>
 				</div>
-				<div class="d-flex align-items-center gap-2">
-					<!-- <button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', -1)">-</button> -->
-					<!-- <span>${miniProducto.quantity || 1}</span> -->
-					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', 1)">+</button>
-				</div>
-				<p class="mb-0 fw-bold">$${(miniProducto.price * (miniProducto.quantity || 1)).toLocaleString()}</p>
+				<div class="align-items-center gap-2"></div>
 			</div>
 		`;
 
 		// contenedor de los botoncitos de agregar o eliminar
-		const buttonContainer = miniCard.querySelector('.d-flex.align-items-center.gap-2');
+		const buttonContainer = miniCard.querySelector('.align-items-center.gap-2');
 
 		// Boton de restar
 		const minusButton = document.createElement('button');
@@ -161,12 +156,6 @@ function actualizarCarritoLateral(){
 // Función para agregar al carrito usando localStorage
 function agregarAlCarrito(product) {
 	
-	Swal.fire({
-		title: 'Compra Procesada',
-		text: 'Se ha procesado la compra #1200',
-		icon: 'success',
-		confirmButtonText: 'Aceptar'
-	});
 	
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	cart.push(product);
