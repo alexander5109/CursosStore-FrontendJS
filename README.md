@@ -10,45 +10,6 @@
 Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y/o la venta de articulos informaticos. Lo ideal sería tener una base de datos propia, o al menos un json, con los cursos y articulos informaticos a ofertar. Pero para cumplir con la consigna del proyecto, se reoriento solamente a la promocion y venta de laptops a través de una api publica. 
 La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva independientemente del dispositivo con el que se la visualice. Cuenta con un carrito de compras que actua como sesión de usuario utilizando el localStorage del navegador. Se implementó de forma lateral y en su propia página.
 
-## Requisitos de la Preentrega
-
-A continuación, se presentan las consignas implementadas en el proyecto:
-
-1. **Estructura semántica**: 
-   - La estructura del HTML está dividida en etiquetas semánticas principales: `<header>`, `<nav>`, `<main>`, `<section>`, y `<footer>`.
-
-2. **Archivo README.md**: 
-   - Este archivo proporciona una explicación breve del propósito de la página y la organización del proyecto.
-
-3. **Formulario funcional**:
-   - Se ha creado un formulario de contacto con campos para nombre, correo electrónico y mensaje. Utiliza **Formspree** para manejar el envío de datos.
-
-4. **Estilos básicos**:
-   - Se han aplicado estilos a las secciones del **header**, **footer** y a la lista de navegación para una apariencia visual coherente.
-
-5. **Fuentes de Google Fonts**:
-   - Se ha implementado al menos una fuente desde Google Fonts pero las que mas se utilizan fueron cargadas localmente.
-
-6. **Propiedades de background**:
-   - En cada bloque de articulos se diseño un background con bordes redondeado que actua como marco para texto e imagenes, ademas de haber utilizado un background-image para el body de todas las paginas.
-
-7. **Sección "Productos"**:
-   - Esta sección está organizada en tarjetas (cards) y se han distribuido utilizando **Flexbox**.
-
-8. **Sección "Reseñas"**:
-   - La sección de reseñas está organizada con **Grid**, distribuyendo los elementos en filas de tres columnas
-
-9. **Sección "Contacto"**:
-   - La sección contactos todavia NO utiliza **Media Queries** para adaptarse a diferentes tamaños de pantalla.
-
-10. **Multimedia**:
-    - La página incluye archivos multimedia (imágenes, videos o iframes) integrados correctamente.
-
-11. **Lista de navegación**:
-    - Se ha implementado una lista desordenada con enlaces que simulan una navegación interna (Inicio, Productos, Contacto, etc.).
-
-12. **Hosting**:
-    - El proyecto está subido a un repositorio personal de github y desplegado mediante GitHub Pages.
 
 ## Tecnologías Utilizadas
 
@@ -60,6 +21,9 @@ A continuación, se presentan las consignas implementadas en el proyecto:
 - **Flexbox y Grid** para la disposición de los elementos.
 - **Media Queries** para la adaptación a diferentes dispositivos.
 - **Hosting** en **GitHub Pages**.
+- **LocalStorage** para recordar los items en el carrito y simular una sesión.
+- **Bootstrap** para el diseño responsivo de cards y botones.
+- **SweetAlert** para alerts con diseño estetico y animado.
 
 ## URL del Proyecto
 
