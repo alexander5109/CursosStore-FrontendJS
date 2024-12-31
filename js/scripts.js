@@ -64,10 +64,34 @@ function actualizarCajaDeCompras(){
         precioCelda.textContent = `$${item.price}`;
         row.appendChild(precioCelda);
 
-        // Cantidad (hardcodeado a 1)
+        // Acciones
         const cantidadCelda = document.createElement('td');
-        cantidadCelda.textContent = 1;
+        // cantidadCelda.textContent = 1;
+		
+		const botonera = document.createElement('div');
+		botonera.className = 'card-body flex-wrap align-items-center gap-2';
+		// botonera.style.flexGrow = '1'; // Ensures the botonera expands within the row
+		// botonera.style.display = 'flex'; // Ensure proper layout of buttons inside
+		// botonera.style.justifyContent = 'space-between'; // Distributes buttons evenly
+
+			// columna Acciones: Boton de restar
+			const minusButton = document.createElement('button');
+			minusButton.className = 'btn btn-outline-secondary btn-sm';
+			minusButton.textContent = '-';
+			minusButton.addEventListener('click', () => eliminarDelCarritoDesdeCaja(item));
+
+			// columna Acciones: Boton de agregar
+			const plusButton = document.createElement('button');
+			plusButton.className = 'btn btn-outline-secondary btn-sm';
+			plusButton.textContent = '+';
+			plusButton.addEventListener('click', () => agregarAlCarritoDesdeCaja(item));
+
+		// Append buttons to botonera
+		botonera.appendChild(minusButton);
+		botonera.appendChild(plusButton);
+		cantidadCelda.appendChild(botonera);
         row.appendChild(cantidadCelda);
+		
 
         // Subtotal
         const subtotal = item.price; 
@@ -75,24 +99,6 @@ function actualizarCajaDeCompras(){
         subtotalCelda.textContent = `$${subtotal}`;
         row.appendChild(subtotalCelda);
 		
-		
-        // columna Acciones
-		const botonera = document.createElement('div');
-		botonera.className = 'card-body flex-wrap align-items-center gap-2';
-		// columna Acciones: Boton de restar
-		const minusButton = document.createElement('button');
-		minusButton.className = 'btn btn-outline-secondary btn-sm';
-		minusButton.textContent = '-';
-		minusButton.addEventListener('click', () => eliminarDelCarritoDesdeCaja(item));
-		// columna Acciones: Boton de agregar
-		const plusButton = document.createElement('button');
-		plusButton.className = 'btn btn-outline-secondary btn-sm';
-		plusButton.textContent = '+';
-		plusButton.addEventListener('click', () => agregarAlCarritoDesdeCaja(item));
-
-		botonera.appendChild(minusButton);
-		botonera.appendChild(plusButton);
-        row.appendChild(botonera);
 		
 		
 		
