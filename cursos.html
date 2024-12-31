@@ -41,9 +41,10 @@
 	
 	<img src="img/cursos.png" alt="imagen de curso">
 
-
+	<!-- -LA SECTION VA A SEPARAR DE IZQUIERDA A DERECHA -->
 	<section>
-		<!-- -LA SECTION VA A SEPARAR DE IZQUIERDA A DERECHA -->
+
+		<!-- -----------------LAS CARDS---------------------- -->
 		<article>
 			<div class="row row-cols-1 row-cols-md-2 g-4" id="contenedor_de_cards">
 				<!-- <div class="col"> -->
@@ -59,35 +60,41 @@
 				<!-- </div> -->
 			</div>
 		</article>
-<aside>
-    <h2>Carrito</h2>
-    
-    <div id="carrito-items" class="d-flex flex-column gap-3 mt-3">
-        <div class="card">
-            <div class="card-body d-flex flex-wrap align-items-center gap-2">
-                <div class="flex-grow-1">
-                    <h3 class="mb-1">Producto 1</h3>
-                    <h4 class="text-muted mb-1">$200.000</h4>
-                </div>
-                <div class="d-flex align-items-center gap-2">
-                    <button class="btn btn-outline-secondary btn-sm">-</button>
-                    <span>1</span>
-                    <button class="btn btn-outline-secondary btn-sm">+</button>
-                </div>
-                <p class="mb-0 fw-bold">$100</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mt-4">
-        <p class="text-end fs-5"><strong>Total:</strong> $300</p>
-    </div>
-    
-    <div class="d-flex flex-wrap justify-content-between mt-3">
-        <button class="btn btn-primary">Finalizar compra</button>
-        <button class="btn btn-danger">Cancelar Todo</button>
-    </div>
-</aside>
+		
+		
+		
+		
+		
+		<!-- -----------------CARRITO LATERAL---------------------- -->
+		<aside id="carrito-lateral" >
+			<h2>Carrito</h2>
+			
+			<div id="carrito-items" class="d-flex flex-column gap-3 mt-3">
+				<div class="card">
+					<div class="card-body d-flex flex-wrap align-items-center gap-2">
+						<div class="flex-grow-1">
+							<h3 class="mb-1">Producto 1</h3>
+							<h4 class="text-muted mb-1">$200.000</h4>
+						</div>
+						<div class="d-flex align-items-center gap-2">
+							<!-- <button class="btn btn-outline-secondary btn-sm">-</button> -->
+							<span>1</span>
+							<!-- <button class="btn btn-outline-secondary btn-sm">+</button> -->
+						</div>
+						<p class="mb-0 fw-bold">$100</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt-4">
+				<p id="total-global" class="text-end fs-5"><strong>Total:</strong> $300</p>
+			</div>
+			
+			<div class="d-flex flex-wrap justify-content-between mt-3">
+				<button class="btn btn-primary">Finalizar compra</button>
+				<button class="btn btn-danger">Cancelar Todo</button>
+			</div>
+		</aside>
 
 
 	</section>
