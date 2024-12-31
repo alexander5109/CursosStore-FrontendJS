@@ -239,6 +239,43 @@
 
 
 
+/* ----------------------------2.carrito-3.tablas------------------------ */
+
+
+.table-responsive {
+    overflow-x: auto; 
+}
+
+@media (max-width: 576px) {
+    .d-flex.flex-column {
+        flex-direction: column !important; 
+    }
+
+    .d-flex.flex-column button {
+        width: 100%;
+    }
+}
+
+	
+form h3 {
+	display: block;
+	text-align: center;
+	font-family: RingBearer;
+	color: hsl(40, 50%, 40%);
+	font-size: 1rem;
+	font-weight: 200;
+	font-style: italic;
+	padding: 0;
+}
+
+	
+	
+
+
+
+
+
+
 /* ----------------------------2.main-3.forms------------------------ */
 	.form-container {
 		display: flex;

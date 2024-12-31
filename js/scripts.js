@@ -64,18 +64,45 @@ function actualizarCajaDeCompras(){
         precioCelda.textContent = `$${item.price}`;
         row.appendChild(precioCelda);
 
-        // Cantidad (hardcodeado a 1)
+        // Acciones
         const cantidadCelda = document.createElement('td');
-        cantidadCelda.textContent = 1;
+        // cantidadCelda.textContent = 1;
+		
+		const botonera = document.createElement('div');
+		botonera.className = 'card-body flex-wrap align-items-center gap-2';
+		// botonera.style.flexGrow = '1'; // Ensures the botonera expands within the row
+		// botonera.style.display = 'flex'; // Ensure proper layout of buttons inside
+		// botonera.style.justifyContent = 'space-between'; // Distributes buttons evenly
+
+			// columna Acciones: Boton de restar
+			const minusButton = document.createElement('button');
+			minusButton.className = 'btn btn-outline-secondary btn-sm';
+			minusButton.textContent = '-';
+			minusButton.addEventListener('click', () => eliminarDelCarritoDesdeCaja(item));
+
+			// columna Acciones: Boton de agregar
+			const plusButton = document.createElement('button');
+			plusButton.className = 'btn btn-outline-secondary btn-sm';
+			plusButton.textContent = '+';
+			plusButton.addEventListener('click', () => agregarAlCarritoDesdeCaja(item));
+
+		// Append buttons to botonera
+		botonera.appendChild(minusButton);
+		botonera.appendChild(plusButton);
+		cantidadCelda.appendChild(botonera);
         row.appendChild(cantidadCelda);
+		
 
         // Subtotal
         const subtotal = item.price; 
         const subtotalCelda = document.createElement('td');
         subtotalCelda.textContent = `$${subtotal}`;
         row.appendChild(subtotalCelda);
-
-        // Agregar fila a la tabla
+		
+		
+		
+		
+		// agregar la fila entera
         carritoTableBody.appendChild(row);
 
         // Sumar al total
@@ -94,36 +121,51 @@ function vaciarCarritoLateral() {
 	actualizarCarritoLateral();
 }
 function actualizarCarritoLateral(){
-	// Retrieve cart data from localStorage
 	const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-	// Get references to relevant elements
 	const carritoItemsContainer = document.getElementById("carrito-items");
 	const totalDisplay = document.querySelector("aside .text-end strong");
 
-	// Clear the current cart display
+	// limpieza
 	carritoItemsContainer.innerHTML = "";
 
 	let total = 0;
 
-	// Loop through the cart and create mini cards
+	// recuperar los objetos (miniCard)
 	cart.forEach((miniProducto) => {
 		const miniCard = document.createElement("div");
 		miniCard.className = "card";
 		miniCard.innerHTML = `
-			<div class="card-body d-flex flex-wrap align-items-center gap-2">
+			<div class="card-body flex-wrap align-items-center gap-2">
 				<div class="flex-grow-1">
 					<h4 class="mb-1">${miniProducto.title}</h4>
 					<h5 class="text-muted mb-1">$${miniProducto.price.toLocaleString()}</h5>
 				</div>
-				<div class="d-flex align-items-center gap-2">
-					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', -1)">-</button>
-					<span>${miniProducto.quantity || 1}</span>
-					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', 1)">+</button>
-				</div>
-				<p class="mb-0 fw-bold">$${(miniProducto.price * (miniProducto.quantity || 1)).toLocaleString()}</p>
+				<div class="align-items-center gap-2"></div>
 			</div>
 		`;
+
+		// contenedor de los botoncitos de agregar o eliminar
+		const botonera = miniCard.querySelector('.align-items-center.gap-2');
+
+		// Boton de restar
+		const minusButton = document.createElement('button');
+		minusButton.className = 'btn btn-outline-secondary btn-sm';
+		minusButton.textContent = '-';
+		minusButton.addEventListener('click', () => eliminarDelCarritoDesdeProductos(miniProducto));
+
+		// Boton de agregar
+		const plusButton = document.createElement('button');
+		plusButton.className = 'btn btn-outline-secondary btn-sm';
+		plusButton.textContent = '+';
+		plusButton.addEventListener('click', () => agregarAlCarritoDesdeProductos(miniProducto));
+
+		// Append los botoncitos a la botonera
+		botonera.appendChild(minusButton);
+		botonera.appendChild(plusButton);
+		
+		// Appendear la botonera entera
+		miniCard.appendChild(botonera);
+		
 		carritoItemsContainer.appendChild(miniCard);
 
 		// Update the total
@@ -136,7 +178,7 @@ function actualizarCarritoLateral(){
 
 
 // Función para agregar al carrito usando localStorage
-function agregarAlCarrito(product) {
+function agregarAlCarritoDesdeProductos(product) {
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	cart.push(product);
 	localStorage.setItem("cart", JSON.stringify(cart));
@@ -145,8 +187,39 @@ function agregarAlCarrito(product) {
 	// alert(`${product.title} ha sido agregado al carrito!`);
 }
 
+function agregarAlCarritoDesdeCaja(product) {
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
+	cart.push(product);
+	localStorage.setItem("cart", JSON.stringify(cart));
+    actualizarCajaDeCompras();	
+	// jode mucho esto
+	// alert(`${product.title} ha sido agregado al carrito!`);
+}
+
+
+function eliminarDelCarritoDesdeProductos(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productIndex = cart.findIndex(item => item.id === product.id); // Assuming 'id' uniquely identifies a product
+    if (productIndex !== -1) {
+        cart.splice(productIndex, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    actualizarCarritoLateral();
+}
+function eliminarDelCarritoDesdeCaja(product) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productIndex = cart.findIndex(item => item.id === product.id);
+    if (productIndex !== -1) {
+        cart.splice(productIndex, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+    actualizarCajaDeCompras();	
+}
+
+
+/*
 // Para modificar la cantidad. Falta logica.
-/*function modificarCantidad(productId, change) {
+function modificarCantidad(productId, change) {
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	const productIndex = cart.findIndex((product) => product.id === productId);
 
@@ -201,7 +274,7 @@ function fetchProductos() {
 				
 				const botonAgregar = cardCol.querySelector("button");
 				botonAgregar.addEventListener("click", () => {
-						agregarAlCarrito(producto); // Pass the product directly
+						agregarAlCarritoDesdeProductos(producto); // Pass the product directly
 					});
 				// limite++; // Increment the product count
 				contenedor_de_cards.appendChild(cardCol);
