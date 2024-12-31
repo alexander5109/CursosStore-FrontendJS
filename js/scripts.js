@@ -117,13 +117,36 @@ function actualizarCarritoLateral(){
 					<h5 class="text-muted mb-1">$${miniProducto.price.toLocaleString()}</h5>
 				</div>
 				<div class="d-flex align-items-center gap-2">
-					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', -1)">-</button>
-					<span>${miniProducto.quantity || 1}</span>
+					<!-- <button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', -1)">-</button> -->
+					<!-- <span>${miniProducto.quantity || 1}</span> -->
 					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', 1)">+</button>
 				</div>
 				<p class="mb-0 fw-bold">$${(miniProducto.price * (miniProducto.quantity || 1)).toLocaleString()}</p>
 			</div>
 		`;
+
+		// contenedor de los botoncitos de agregar o eliminar
+		const buttonContainer = miniCard.querySelector('.d-flex.align-items-center.gap-2');
+
+		// Boton de restar
+		const minusButton = document.createElement('button');
+		minusButton.className = 'btn btn-outline-secondary btn-sm';
+		minusButton.textContent = '-';
+		minusButton.addEventListener('click', () => eliminarDelCarrito(miniProducto));
+
+		// Boton de agregar
+		const plusButton = document.createElement('button');
+		plusButton.className = 'btn btn-outline-secondary btn-sm';
+		plusButton.textContent = '+';
+		plusButton.addEventListener('click', () => agregarAlCarrito(miniProducto));
+
+		// Append los botoncitos a la botonera
+		buttonContainer.appendChild(minusButton);
+		buttonContainer.appendChild(plusButton);
+		
+		// Appendear la botonera entera
+		miniCard.appendChild(buttonContainer);
+		
 		carritoItemsContainer.appendChild(miniCard);
 
 		// Update the total
@@ -137,6 +160,14 @@ function actualizarCarritoLateral(){
 
 // Función para agregar al carrito usando localStorage
 function agregarAlCarrito(product) {
+	
+	Swal.fire({
+		title: 'Compra Procesada',
+		text: 'Se ha procesado la compra #1200',
+		icon: 'success',
+		confirmButtonText: 'Aceptar'
+	});
+	
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	cart.push(product);
 	localStorage.setItem("cart", JSON.stringify(cart));
@@ -145,8 +176,29 @@ function agregarAlCarrito(product) {
 	// alert(`${product.title} ha sido agregado al carrito!`);
 }
 
+function eliminarDelCarrito(product) {
+    // Retrieve the cart from localStorage or initialize it as an empty array
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Find the index of the first occurrence of the product in the cart
+    const productIndex = cart.findIndex(item => item.id === product.id); // Assuming 'id' uniquely identifies a product
+
+    if (productIndex !== -1) {
+        // Remove one instance of the product from the cart
+        cart.splice(productIndex, 1);
+        
+        // Update the cart in localStorage
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    // Update the UI after removing the product
+    actualizarCarritoLateral();
+}
+
+
+/*
 // Para modificar la cantidad. Falta logica.
-/*function modificarCantidad(productId, change) {
+function modificarCantidad(productId, change) {
 	let cart = JSON.parse(localStorage.getItem("cart")) || [];
 	const productIndex = cart.findIndex((product) => product.id === productId);
 
