@@ -14,36 +14,104 @@ function alertItemAgregado() {
 	});
 }
 
+
+function limpiarStorageDesdeProductos() {
+    localStorage.removeItem("cart");
+    actualizarCarritoLateral();
+}
+function limpiarStorageDesdeLaCajaDeCompras() {
+    localStorage.removeItem("cart");
+	actualizarCajaDeCompras();
+}
+
+
+function actualizarCajaDeCompras(){
+    const carritoItemsStorage = JSON.parse(localStorage.getItem('cart')) || [];
+    const carritoTableBody = document.getElementById('carrito-items');
+    const totalgeneral = document.getElementById('total');
+    let total = 0;
+
+ 
+    // Cargar productos en la tabla del carrito
+    carritoItemsStorage.forEach(item => 
+    {
+        const row = document.createElement('tr');
+
+        // Nombre del producto
+        const nombreCelda = document.createElement('td');
+        nombreCelda.textContent = item.title;
+        row.appendChild(nombreCelda);
+
+        // Precio del producto
+        const precioCelda = document.createElement('td');
+        precioCelda.textContent = `$${item.price}`;
+        row.appendChild(precioCelda);
+
+        // Cantidad (hardcodeado a 1)
+        const cantidadCelda = document.createElement('td');
+        cantidadCelda.textContent = 1;
+        row.appendChild(cantidadCelda);
+
+        // Subtotal
+        const subtotal = item.price; 
+        const subtotalCelda = document.createElement('td');
+        subtotalCelda.textContent = `$${subtotal}`;
+        row.appendChild(subtotalCelda);
+
+        // Agregar fila a la tabla
+        carritoTableBody.appendChild(row);
+
+        // Sumar al total
+        total += subtotal;
+    });
+
+    // Mostrar el total
+    totalgeneral.textContent = total.toFixed(2);
+
+
+}
+
+
+
 function actualizarCarritoLateral(){
-	int total = 0;
-    const carritoAsideObject = document.getElementById('total-global');
-	
-    const carritoAsideObject = document.getElementById('carrito-lateral');
-	let producto = productos[i];
-	
-	for producto in local_storage:
+	// Retrieve cart data from localStorage
+	const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+	// Get references to relevant elements
+	const carritoItemsContainer = document.getElementById("carrito-items");
+	const totalDisplay = document.querySelector("aside .text-end strong");
+
+	// Clear the current cart display
+	carritoItemsContainer.innerHTML = "";
+
+	let total = 0;
+
+	// Loop through the cart and create mini cards
+	cart.forEach((miniProducto) => {
 		const miniCard = document.createElement("div");
-		miniCard.className = "card-body d-flex flex-wrap align-items-center gap-2";
+		miniCard.className = "card";
 		miniCard.innerHTML = `
-		<div class="card">
 			<div class="card-body d-flex flex-wrap align-items-center gap-2">
 				<div class="flex-grow-1">
-					<h3 class="mb-1">${producto.name}</h3>
-					<h4 class="text-muted mb-1">${producto.price}</h4>
+					<h4 class="mb-1">${miniProducto.title}</h4>
+					<h5 class="text-muted mb-1">$${miniProducto.price.toLocaleString()}</h5>
 				</div>
 				<div class="d-flex align-items-center gap-2">
-					// <button class="btn btn-outline-secondary btn-sm">-</button>
-					<span>${producto.cantidad}</span>
-					// <button class="btn btn-outline-secondary btn-sm">+</button>
+					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', -1)">-</button>
+					<span>${miniProducto.quantity || 1}</span>
+					<button class="btn btn-outline-secondary btn-sm" onclick="modificarCantidad('${miniProducto.id}', 1)">+</button>
 				</div>
-				<p class="mb-0 fw-bold">$100</p>
+				<p class="mb-0 fw-bold">$${(miniProducto.price * (miniProducto.quantity || 1)).toLocaleString()}</p>
 			</div>
-		</div>
 		`;
-		total += producto.precio * producto.cantidad;
-		
-	carritoAsideObject.textContent = `Total: ${total}`
-	
+		carritoItemsContainer.appendChild(miniCard);
+
+		// Update the total
+		total += miniProducto.price * (miniProducto.quantity || 1);
+	});
+
+	// Update the total display
+	totalDisplay.textContent = `Total: $${total.toLocaleString()}`;
 }
 
 
@@ -53,9 +121,25 @@ function agregarAlCarrito(product) {
 	cart.push(product);
 	localStorage.setItem("cart", JSON.stringify(cart));
 	actualizarCarritoLateral();
-	alert(`${product.title} ha sido agregado al carrito!`);
+	// jode mucho esto
+	// alert(`${product.title} ha sido agregado al carrito!`);
 }
 
+// Para modificar la cantidad. Falta logica.
+/*function modificarCantidad(productId, change) {
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
+	const productIndex = cart.findIndex((product) => product.id === productId);
+
+	if (productIndex !== -1) {
+		cart[productIndex].quantity = (cart[productIndex].quantity || 1) + change;
+		if (cart[productIndex].quantity <= 0) {
+			cart.splice(productIndex, 1);
+		}
+	}
+	localStorage.setItem("cart", JSON.stringify(cart));
+	actualizarCarritoLateral();
+}
+*/
 
 
 // Cargr los productos cada vez q se abre la pag
@@ -104,16 +188,60 @@ function fetchProductos() {
 			}
 		})
 	.catch((error) => console.error("Error fetching products:", error));
+	
+	
+	actualizarCarritoLateral();
+	
+}
+
+function finalizarCompra() {
+    // Firear el sweet Alert
+	Swal.fire({
+		title: 'Compra Procesada',
+		text: 'Se ha procesado la compra #1200',
+		icon: 'success',
+		confirmButtonText: 'Aceptar'
+	});
+
+	// Limpiar el carrito después de finalizar la compra
+	localStorage.removeItem('cart'); 
+	
+	// Redirigir al inicio despues de 4 segundos
+	setTimeout(() => {
+	window.location.href = 'index.html'; 
+	}, 4000);     
 }
 
 
 
 
 
+
+
+function decidirQueEjecutar() {
+    const currentPage = window.location.pathname;
+    if (currentPage.includes("cursos.html")) {
+        fetchProductos();
+        actualizarCarritoLateral();
+        document.getElementById("vaciar-carrito").addEventListener("click", limpiarStorageDesdeProductos);
+
+    } else if (currentPage.includes("carrito.html")) {
+        actualizarCajaDeCompras();
+		document.getElementById('limpiar-carrito').addEventListener('click',limpiarStorageDesdeLaCajaDeCompras);
+		document.getElementById('volver-a-productos').addEventListener('click',() => { window.location.href = 'index.html'; });
+		document.getElementById('finalizar-compra').addEventListener('click', finalizarCompra);
+     
+	
+    }
+	
+	
+}
+
+
 // --------------------------------------------------------------------#
 // ----------------------------ok. main--------------------------------#
 // --------------------------------------------------------------------#
 
-document.addEventListener("DOMContentLoaded", fetchProductos);
+document.addEventListener("DOMContentLoaded", decidirQueEjecutar);
 
 
