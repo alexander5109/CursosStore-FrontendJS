@@ -3,21 +3,21 @@
 #----------------------------------------------------------------------*/
 @font-face {
 	font-family: 'SachaWynterTight';
-	src: url('fonts/sachwt_.ttf') format('truetype');
+	src: url('fonts/SachaWynterTight.TTF') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'RingBearer';
-	src: url('fonts/RINGM__.ttf') format('truetype');
+	src: url('fonts/RingBearer.TTF') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Harrington';
-	src: url('fonts/HARNGTON.TTF.ttf') format('truetype');
+	src: url('fonts/Harrington.TTF') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
