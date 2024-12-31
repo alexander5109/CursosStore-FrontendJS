@@ -14,14 +14,17 @@ function alertItemAgregado() {
 	});
 }
 
-
-function limpiarStorageDesdeProductos() {
-    localStorage.removeItem("cart");
-    actualizarCarritoLateral();
+function irAProductos(){
+	window.location.href = 'cursos.html';
 }
-function limpiarStorageDesdeLaCajaDeCompras() {
+function irACarrito(){
+	window.location.href = 'carrito.html';
+}
+
+// -----------------------------CositoLateral---------------------------------------#
+function vaciarCarritoPage() {
     localStorage.removeItem("cart");
-	actualizarCajaDeCompras();
+    actualizarCajaDeCompras();
 }
 
 
@@ -30,7 +33,8 @@ function actualizarCajaDeCompras(){
     const carritoTableBody = document.getElementById('carrito-items');
     const totalgeneral = document.getElementById('total');
     let total = 0;
-
+	carritoTableBody.innerHTML = "";
+	
  
     // Cargar productos en la tabla del carrito
     carritoItemsStorage.forEach(item => 
@@ -67,12 +71,15 @@ function actualizarCajaDeCompras(){
 
     // Mostrar el total
     totalgeneral.textContent = total.toFixed(2);
-
-
 }
 
 
 
+// -----------------------------CositoLateral---------------------------------------#
+function vaciarCarritoLateral() {
+    localStorage.removeItem("cart");
+	actualizarCarritoLateral();
+}
 function actualizarCarritoLateral(){
 	// Retrieve cart data from localStorage
 	const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -188,8 +195,6 @@ function fetchProductos() {
 			}
 		})
 	.catch((error) => console.error("Error fetching products:", error));
-	
-	
 	actualizarCarritoLateral();
 	
 }
@@ -208,7 +213,7 @@ function finalizarCompra() {
 	
 	// Redirigir al inicio despues de 4 segundos
 	setTimeout(() => {
-	window.location.href = 'index.html'; 
+	window.location.href = 'cursos.html'; 
 	}, 4000);     
 }
 
@@ -223,13 +228,9 @@ function decidirQueEjecutar() {
     if (currentPage.includes("cursos.html")) {
         fetchProductos();
         actualizarCarritoLateral();
-        document.getElementById("vaciar-carrito").addEventListener("click", limpiarStorageDesdeProductos);
 
     } else if (currentPage.includes("carrito.html")) {
         actualizarCajaDeCompras();
-		document.getElementById('limpiar-carrito').addEventListener('click',limpiarStorageDesdeLaCajaDeCompras);
-		document.getElementById('volver-a-productos').addEventListener('click',() => { window.location.href = 'index.html'; });
-		document.getElementById('finalizar-compra').addEventListener('click', finalizarCompra);
      
 	
     }
