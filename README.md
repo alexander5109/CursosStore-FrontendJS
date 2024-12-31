@@ -2,12 +2,13 @@
 
 * Autor: Alexander Seling
 * Curso: Talento Tech Front End JS
-* 2024, Noviembre 12
+* 2024, Diciembre
 * Instructor: Nicolas Fernandez
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y/o la venta de articulos informaticos. La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva independientemente del dispositivo con el que se la visualice. Se pretende incluir la implementación de un carrito de compras que permite a los usuarios seleccionar cursos a medida que explora el listado.
+Este proyecto consiste en el desarrollo de una página web comercial orientada a la promoción de cursos vinculados a la programación y/o la venta de articulos informaticos. Lo ideal sería tener una base de datos propia, o al menos un json, con los cursos y articulos informaticos a ofertar. Pero para cumplir con la consigna del proyecto, se reoriento solamente a la promocion y venta de laptops a través de una api publica. 
+La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y atractiva, facilitando la navegación a través de una estructura semántica y responsiva independientemente del dispositivo con el que se la visualice. Cuenta con un carrito de compras que actua como sesión de usuario utilizando el localStorage del navegador. Se implementó de forma lateral y en su propia página.
 
 ## Requisitos de la Preentrega
 

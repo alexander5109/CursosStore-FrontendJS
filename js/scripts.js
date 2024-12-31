@@ -41,6 +41,19 @@ function actualizarCajaDeCompras(){
     {
         const row = document.createElement('tr');
 
+        // Imagen del producto
+        const imageCelda = document.createElement('td');
+		const img = document.createElement('img');
+		img.src = item.thumbnail; 
+		img.alt = item.title; 
+		img.style.width = '100px';
+		img.style.height = '100px'
+		img.style.objectFit = 'cover';
+		imageCelda.style.textAlign = 'center'; 
+		imageCelda.style.verticalAlign = 'middle'; 
+		imageCelda.appendChild(img);
+        row.appendChild(imageCelda);
+		
         // Nombre del producto
         const nombreCelda = document.createElement('td');
         nombreCelda.textContent = item.title;
@@ -200,6 +213,9 @@ function fetchProductos() {
 }
 
 function finalizarCompra() {
+	// Limpiar el carrito después de finalizar la compra
+	localStorage.removeItem('cart'); 
+	
     // Firear el sweet Alert
 	Swal.fire({
 		title: 'Compra Procesada',
@@ -207,14 +223,11 @@ function finalizarCompra() {
 		icon: 'success',
 		confirmButtonText: 'Aceptar'
 	});
-
-	// Limpiar el carrito después de finalizar la compra
-	localStorage.removeItem('cart'); 
 	
 	// Redirigir al inicio despues de 4 segundos
 	setTimeout(() => {
 	window.location.href = 'cursos.html'; 
-	}, 4000);     
+	}, 2000);     
 }
 
 
