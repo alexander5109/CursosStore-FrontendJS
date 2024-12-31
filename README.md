@@ -23,11 +23,11 @@ La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y at
 - **Hosting** en **GitHub Pages**.
 - **LocalStorage** para recordar los items en el carrito y simular una sesión.
 - **Bootstrap** para el diseño responsivo de cards y botones.
-- **SweetAlert** para alerts con diseño estetico y animado.
+- **SweetAlert** para alerts con diseño más estético y animado.
 
 ## URL del Proyecto
 
-El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html](https://ecthelion5109.github.io/TalentoTechProyectoFrontEnd/index.html)
+El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html)
 
 ## Instalación y Uso
 
