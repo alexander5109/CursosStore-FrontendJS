@@ -27,7 +27,7 @@ La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y at
 
 ## URL del Proyecto
 
-El proyecto puede visualizarse en la siguiente URL: [https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html)
+El proyecto puede visualizarse en la siguiente URL: [[https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://alexander5109.github.io/CursosStore-FrontendJS/)]([https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://alexander5109.github.io/CursosStore-FrontendJS/))
 
 ## Instalación y Uso
 
