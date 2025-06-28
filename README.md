@@ -26,8 +26,7 @@ La página tiene como objetivo ofrecer una experiencia de usuario intuitiva y at
 - **SweetAlert** para alerts con diseño más estético y animado.
 
 ## URL del Proyecto
-
-El proyecto puede visualizarse en la siguiente URL: [[https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://alexander5109.github.io/CursosStore-FrontendJS/)]([https://ecthelion5109.github.io/TalentoTech-FrontEndJS/index.html](https://alexander5109.github.io/CursosStore-FrontendJS/))
+El proyecto puede visualizarse en la siguiente URL: [https://alexander5109.github.io/CursosStore-FrontendJS/](https://alexander5109.github.io/CursosStore-FrontendJS/)
 
 ## Instalación y Uso
 
